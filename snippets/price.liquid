@@ -98,12 +98,13 @@
             {%- assign sale_container_class = 'price__sale' -%}
             <div class="{{ sale_container_class }}">
               <div class="price__sale-inner">
-                <span class="visually-hidden">{{- 'product.price_regular' | t -}}</span>
-                <s>{{- compare_at_price | money -}}</s>
                 <ins>
                   <span class="visually-hidden">{{- 'product.price_sale' | t -}}</span>
                   <ins>{{ money_price }}</ins>
                 </ins>
+                <span class="visually-hidden">{{- 'product.price_regular' | t -}}</span>
+                <s>{{- compare_at_price | money -}}</s>
+               
               </div>
             </div>
           {% else %}

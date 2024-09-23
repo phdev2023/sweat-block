@@ -151,7 +151,7 @@
           id="ProductSubmitButton-{{ section_id }}"
           type="submit"
           name="add"
-          class="product-form__submit button button--filled uppercase button--full"
+          class="product-form__submit button button--filled uppercase button--full check"
           {% if product.selected_or_first_available_variant.available == false
             or quantity_rule_soldout
             or product.selected_or_first_available_variant == nil
@@ -167,7 +167,8 @@
             {%- else -%}
               {{ 'theme.actions.add_to_cart' | t }}
             {%- endif -%}
-          </span>
+          </span> - 
+          <span id="button-price-{{- section.id -}}">{{ product.selected_or_first_available_variant.price | money  }}</span>
           <div class="loading__spinner hidden">
             {%- render 'loading-spinner' -%}
           </div>

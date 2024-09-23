@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
@@ -25,13 +34,14 @@
             "icon": "theme-check",
             "link_to_resource": "vendor",
             "text_before_link": false,
-            "heading_secondary": ""
+            "heading_secondary": "",
+            "metafield_for_product_variant": "",
+            "show_block_content": true
           }
         },
-        "badge_dC66pN": {
-          "type": "badge",
+        "judge_me_reviews_preview_badge_hhmAmQ": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
-            "spacing_bottom": "1"
           }
         },
         "1e0c79e9-7de0-4eee-b9c5-f27132635fb8": {
@@ -49,6 +59,15 @@
             "show_price_custom_info": ""
           }
         },
+        "badge_dC66pN": {
+          "type": "badge",
+          "settings": {
+            "spacing_bottom": "1",
+            "show_badges": true,
+            "show_badges_discount": true,
+            "show_badges_sold": true
+          }
+        },
         "b2dabe12-2158-4ba6-bc54-9baae453acf5": {
           "type": "text",
           "settings": {
@@ -57,7 +76,9 @@
             "icon": "theme-check",
             "link_to_resource": "none",
             "text_before_link": false,
-            "heading_secondary": ""
+            "heading_secondary": "",
+            "metafield_for_product_variant": "",
+            "show_block_content": true
           }
         },
         "1ad0121e-439d-45c0-b45d-4f080836ade5": {
@@ -68,7 +89,9 @@
             "icon": "theme-check",
             "link_to_resource": "none",
             "text_before_link": false,
-            "heading_secondary": ""
+            "heading_secondary": "",
+            "metafield_for_product_variant": "",
+            "show_block_content": true
           }
         },
         "text_VjFnJy": {
@@ -79,7 +102,9 @@
             "icon": "theme-check",
             "link_to_resource": "none",
             "text_before_link": false,
-            "heading_secondary": ""
+            "heading_secondary": "",
+            "metafield_for_product_variant": "",
+            "show_block_content": true
           }
         },
         "divider_HGwyhB": {
@@ -96,11 +121,14 @@
             "behaviour": "plain",
             "heading": "",
             "text_truncate": 3,
-            "icon": "theme-release"
+            "icon": "theme-release",
+            "metafield_for_product_variant": "",
+            "show_block_content": true
           }
         },
         "1e939cd6-0955-4135-a9e5-c50faef01437": {
           "type": "purchase_options",
+          "disabled": true,
           "settings": {
             "spacing_bottom": "1",
             "show_subscription_title": true,
@@ -117,6 +145,26 @@
             "show_variant_images": true,
             "size_guide_page": "size-guide",
             "sizes_option": "Size"
+          }
+        },
+        "skio_subscriptions_yc_s20_app_block_jzezUh": {
+          "type": "shopify:\/\/apps\/skio-subscriptions-yc-s20\/blocks\/app-block\/de50f7a4-0bb0-4d4c-84e2-c03dce83436d",
+          "settings": {
+            "form_id": "product-form-{{section.id}}",
+            "start_onetime": "true",
+            "onetime_first": "true",
+            "default_subscription": "",
+            "group_border_radius": 5,
+            "group_border_shadow": true,
+            "group_border_selected_color": "rgba(0,0,0,0)",
+            "onetime_title": "One Time Purchase",
+            "subscription_title": "Subscribe & Save",
+            "prepaid_title": "Prepaid",
+            "discount_format": "percent",
+            "discount_style": "bubble",
+            "discount_prefix": "Save",
+            "discount_suffix": "",
+            "discount_color": "#e8ff7a"
           }
         },
         "8604a6ff-ad0b-44dd-8068-1de4e062f8e8": {
@@ -184,7 +232,9 @@
             "heading": "Description",
             "row_content": "<p>blalkasdjflkasjdf;klsa ;laksjdf asdf ;saldkfj sdf;lasdf asdfl;kjsad f;laskdfj as;lkdjfasdfasdf<\/p>",
             "icon": "",
-            "page": ""
+            "page": "",
+            "metafield_for_product_variant": "",
+            "show_block_content": true
           }
         },
         "content_block_Mf8cTa": {
@@ -193,7 +243,9 @@
             "heading": "Ingredients",
             "row_content": "",
             "icon": "",
-            "page": ""
+            "page": "",
+            "metafield_for_product_variant": "",
+            "show_block_content": true
           }
         },
         "content_block_z9G8Ah": {
@@ -202,7 +254,9 @@
             "heading": "How to Apply",
             "row_content": "",
             "icon": "",
-            "page": ""
+            "page": "",
+            "metafield_for_product_variant": "",
+            "show_block_content": true
           }
         }
       },
@@ -210,9 +264,10 @@
         "goback_zMzywG",
         "breadcrumbs_JRrp9d",
         "text_w7iGN6",
-        "badge_dC66pN",
+        "judge_me_reviews_preview_badge_hhmAmQ",
         "1e0c79e9-7de0-4eee-b9c5-f27132635fb8",
         "8effeb43-55b7-4ec4-ab9b-68bcd89b865b",
+        "badge_dC66pN",
         "b2dabe12-2158-4ba6-bc54-9baae453acf5",
         "1ad0121e-439d-45c0-b45d-4f080836ade5",
         "text_VjFnJy",
@@ -220,6 +275,7 @@
         "description_qA3HqH",
         "1e939cd6-0955-4135-a9e5-c50faef01437",
         "1e939cd6-0958-4135-a9e5-c50faef01437",
+        "skio_subscriptions_yc_s20_app_block_jzezUh",
         "8604a6ff-ad0b-44dd-8068-1de4e062f8e8",
         "e6d841d6-2f71-40b3-956a-912df13f9f6e",
         "7be6b89c-da83-4ff2-9b85-44fb28cbfa27",
@@ -231,6 +287,10 @@
         "content_block_LVFMzA",
         "content_block_Mf8cTa",
         "content_block_z9G8Ah"
+      ],
+      "custom_css": [
+        ".product__title {font-size: calc(var(--font-size-static-large) * 1.5);}",
+        ".product__price s {opacity: 0.7;}"
       ],
       "settings": {
         "product_media_layout": "product__media-layout--full",
@@ -250,7 +310,9 @@
         "color_scheme_gallery": "scheme-1",
         "enable_sticky_info": true,
         "enable_actions_bar": true,
+        "media_grid_size": "large",
         "media_grid_position": "start",
+        "grid_gap": "2",
         "spacing_grid": 1.6,
         "grid_content_alignment": "start",
         "section_width": "max-w-page",

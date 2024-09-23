@@ -1,0 +1,31 @@
+.product-form__submit{
+    font-size: calc(var(--font-button-scale)* 1.3rem);
+}
+.template--product .product__content{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+.template--product .product__price{
+    width: auto;
+}
+.template--product .product__text{
+    width: 100%;
+}
+.template--product  .product__buy-buttons{
+    width: 100%;
+    margin:20px 0;
+    margin-block-end: 20px !important;
+}
+.template--product  .product__app-block{
+    width: 100%;
+}
+
+.template--product .product__accordion{
+    width: 100%;
+}
+
+.template--product .product__content-grid{
+    margin-block-end: 20px !important;
+}
