@@ -1,0 +1,21 @@
+{% assign colors_codes = '' %}
+{% for swatch in shop.metaobjects.color_swatches.values %}
+  {% if swatch.image.value != blank %}
+    {% assign image_name = swatch.image.value | replace: 'files/', '' %}
+    {% assign colors_codes = colors_codes | append: swatch.name.value | append: '|' | append: image_name %}
+  {% else %}
+    {% assign colors_codes = colors_codes | append: swatch.name.value | append: '|' | append: swatch.value.value %}
+  {% endif %}
+  {% unless forloop.last %}
+    {% assign colors_codes = colors_codes | append: ',' %}
+  {% endunless %}
+{% endfor %}
+{% assign colors_codes_arr = colors_codes | split: ',' %}
+{%- liquid
+  for color_setting in colors_codes_arr
+    unless forloop.first
+      echo ','
+    endunless
+    echo color_setting | split: '|' | first | handle
+  endfor
+-%}

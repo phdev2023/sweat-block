@@ -1,0 +1,175 @@
+{% comment %}
+    Renders single facet
+    Accepts:
+    - index: {Int} facet index
+    - section_id: {String} section id
+    - filter: {Object} filter liquid object
+    Usage:
+    {%- render 'facet', index: forloop.index, section_id: section.id, filter: filter -%}
+{% endcomment %}
+
+{% liquid
+  assign currencies_using_comma_decimals = 'ANG,ARS,BRL,BYN,BYR,CLF,CLP,COP,CRC,CZK,DKK,EUR,HRK,HUF,IDR,ISK,MZN,NOK,PLN,RON,RUB,SEK,TRY,UYU,VES,VND' | split: ','
+  assign uses_comma_decimals = false
+  if currencies_using_comma_decimals contains cart.currency.iso_code
+    assign uses_comma_decimals = true
+  endif
+
+  assign opened_accordions = opened_accordions | default: false
+%}
+
+<details class="accordion__section facets__accordion-section{% if opened_accordions %} is-active{% endif %}" id="Filters-accordion-section-{{- index -}}"{% if opened_accordions %} open{% endif %}>
+  <summary class="facets__accordion-btn h4 js-btn" id="Filters-accordion-button-{{- index -}}">
+    {{- filter.label | escape -}}
+
+    <div class="facets__accordion-icon">
+      {%- render 'icon', icon_name: 'theme-chevron', class: 'icon' -%}
+    </div>
+  </summary>
+
+  <div class="accordion__body facets__accordion-body" id="Filters-accordion-dropdown-{{- index -}}" {% if opened_accordions %} style="height: auto;"{% endif %}>
+    <div class="js-filter" data-index="{{- index -}}">
+      {%- case filter.type -%}
+        {%- when 'list' or 'boolean' -%}
+          <ul class="facets__list list-unstyled" role="list">
+
+            {%- for value in filter.values -%}
+              <li class="facets__item{% if value.active %} facets__item--checked{% endif %}">
+                {%- liquid
+                  assign filter_label_handle = filter.label | handleize
+                  assign checkbox_additional_classes = ''
+                  assign checkbox_id_postfix = postfix
+                  capture checkbox_attr
+                    if value.active
+                      echo 'checked'
+                    endif
+
+                    if value.count == 0 and value.active == false
+                      echo 'disabled'
+                    endif
+                  endcapture
+
+                  capture id
+                    echo 'Filter-'
+                    echo filter_label_handle
+                    echo '-'
+                    echo forloop.index
+                    echo checkbox_id_postfix
+                  endcapture
+
+                  assign id = id | strip
+                  assign checkbox_attr = checkbox_attr | strip
+
+                  assign option_is_color = false
+                  assign swatch_options = settings.swatches_option | split: ','
+                  for swatch_opt in swatch_options
+                    assign swatch_opt_striped = swatch_opt | strip
+                    if filter.label == swatch_opt_striped
+                      assign option_is_color = true
+                      assign checkbox_additional_classes = 'checkbox--color '
+
+                      capture color_codes
+                        render 'color-codes-to-check'
+                      endcapture
+
+                      capture swatch_html
+                        render 'product-swatch', input_type: 'checkbox', value: value.value, colors_for_check: color_codes, class: 'swatch--sm swatch--hide-line', id: id, name: value.param_name, attr: checkbox_attr, option_value: value.label
+                      endcapture
+                    endif
+                  endfor
+
+                  if value.count == 0 and value.active == false
+                    assign checkbox_additional_classes = checkbox_additional_classes | append: 'checkbox--disabled'
+                  endif
+                -%}
+
+                <div class="checkbox facet-checkbox {{ checkbox_additional_classes }}" tabindex="0">
+                  {%- if option_is_color -%}
+                    {{ swatch_html }}
+
+                    <label for="{{- id -}}" class="checkbox__label" aria-hidden="true">
+                      {{- value.value -}}
+                    </label>
+                  {%- else -%}
+                    <input
+                      type="checkbox"
+                      name="{{- value.param_name -}}"
+                      value="{{- value.value -}}"
+                      id="{{- id -}}"
+                      {{ checkbox_attr }}
+                    >
+
+                    <label
+                      for="{{- id -}}"
+                    >
+                      {{- value.label | escape -}}
+                    </label>
+                  {%- endif -%}
+
+                  {%- assign id = nil -%}
+                  {%- assign checkbox_attr = nil -%}
+                </div>
+              </li>
+            {%- endfor -%}
+          </ul>
+        {%- when 'price_range' -%}
+          <price-range class="facets__price">
+            <div class="facets__price-row">
+              <span>{{- cart.currency.symbol -}}</span>
+
+              {%-
+                liquid
+                assign label = 'collection.filters_from' | t
+                assign id = 'Filter-' | append: filter.label | escape | append: '-GTE'
+                if filter.min_value.value
+                  if uses_comma_decimals
+                    assign value = filter.min_value.value | money_without_currency | replace: '.', '' | replace: ',', '.'
+                  else
+                    assign value = filter.min_value.value | money_without_currency | replace: ',', ''
+                  endif
+                endif
+                if  uses_comma_decimals
+                  assign max = filter.range_max | money_without_currency | replace: '.', '' | replace: ',', '.'
+                else
+                  assign max = filter.range_max | money_without_currency | replace: ',', ''
+                endif
+
+                render 'text-input', type: 'number', class: 'facets__price-field' name: filter.min_value.param_name, id: id, label: label, placeholder: 0, min: 0, max: max, hide_label: false
+
+                assign label = nil
+                assign id = nil
+                assign value = nil
+                assign max = nil
+              -%}
+            </div>
+            <div class="facets__price-row">
+              <span>{{- cart.currency.symbol -}}</span>
+              {%- liquid
+                assign label = 'collection.filters_to' | t
+                assign id = 'Filter-' | append: filter.label | escape | append: '-LTE'
+                if filter.max_value.value
+                  if uses_comma_decimals
+                    assign value = filter.max_value.value | money_without_currency | replace: '.', '' | replace: ',', '.'
+                  else
+                    assign value = filter.max_value.value | money_without_currency | replace: ',', ''
+                  endif
+                endif
+                if uses_comma_decimals
+                  assign max = filter.range_max | money_without_currency | replace: '.', '' | replace: ',', '.'
+                else
+                  assign max = filter.range_max | money_without_currency | replace: ',', ''
+                endif
+
+                render 'text-input', type: 'number', class: 'facets__price-field' name: filter.max_value.param_name, id: id, value: value, label: label, placeholder: max, min: 0, max: max, hide_label: false
+
+                assign label = nil
+                assign id = nil
+                assign value = nil
+                assign max = nil
+              -%}
+            </div>
+          </price-range>
+      {%- endcase -%}
+    </div>
+  </div>
+</details>

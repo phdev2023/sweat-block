@@ -1,0 +1,60 @@
+{%- comment -%}
+  Renders a product color swatch
+
+  Accepts:
+   - colors_for_check {String}: Coma separated color names with to check from settings for match. Example: 'red, dark-red, dark-blue'
+   - class {String}: Additional css classes for js or styling
+   - input_class {String}: Additional css classes on the input element for js or styling
+   - attr {String}: Additional HTML Attributes for accessability or js
+   - id {String}: Input id
+   - show_label {Bool}: Show input label
+   - input_type: {String}: Input element type
+   - value: {String}: Input element value
+    - variant_img: {Object}: Optional | Variant image object
+{%- endcomment -%}
+{%- liquid
+  assign option_value_handle = value | handle
+  assign class = class | default: ''
+  assign input_class = input_class | default: ''
+  assign attr = attr | default: ''
+  assign id = id | default: option_value_handle
+  assign input_type = input_type | default: 'radio'
+  assign name = name | default: 'Swatch'
+-%}
+<input
+  id="{{- id -}}"
+  type="{{- input_type -}}"
+  name="{{- name -}}"
+  class="visually-hidden {{ input_class }}"
+  {% if value != blank %}value="{{- value | escape -}}"{% endif %}
+  data-color="{{- value | escape -}}"
+  aria-label="{{- value | escape -}}"
+  {{ attr }}
+/>
+
+{% if class contains 'color' and variant_img != blank %}
+  <label
+    for="{{- id -}}"
+    class="swatch swatch--variant-img swatch--labeled {{ class }}"
+    title="{{- value -}}"
+  >
+    {% if variant_img != 'product-placeholder' %}
+      {% render 'image', image: variant_img %}
+    {% else %}
+      {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+    {% endif %}
+    <span {% unless show_label %}class="visually-hidden"{% endunless %}>
+      {{- value -}}
+    </span>
+  </label>
+{% else %}
+  <label
+    for="{{- id -}}"
+    class="swatch{% if class contains 'color'  %} swatch--circle swatch--labeled{% unless colors_for_check contains option_value_handle %} swatch--default{% endunless %}{% else %} {{ settings.product_swatch_style }}{% endif %} swatch--{{ option_value_handle }} {{ class }}"
+    title="{{- value -}}" {% if tabindex  %} tabindex={{- tabindex -}} {% endif %}
+  >
+    <span {% unless show_label %}class="visually-hidden"{% endunless %}>
+      {{- value -}}
+    </span>
+  </label>
+{% endif %}

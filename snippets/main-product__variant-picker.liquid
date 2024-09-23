@@ -1,0 +1,133 @@
+{% comment %}
+  Renders product variant-picker
+
+  Accepts:
+  - product: {Object} product object.
+  - block: {Object} passing the block information.
+  - product_form_id: {String} Id of the product form to which the variant picker is associated.
+  Usage:
+  {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
+{% endcomment %}
+
+{%- unless product.has_only_default_variant -%}
+  <variant-selects
+    id="variant-selects-{{ section.id }}"
+    data-section="{{ section.id }}"
+    {{ block.shopify_attributes }}
+  >
+    {%- for option in product.options_with_values -%}
+      {%- liquid
+        assign picker_type = block.settings.picker_type
+        assign swatch_options = settings.swatches_option | split: ','
+        assign option_is_color = false
+        for swatch_opt in swatch_options
+          assign swatch_opt_striped = swatch_opt | strip
+          if option.name == swatch_opt_striped
+            assign option_is_color = true
+          endif
+        endfor
+        if option_is_color == false and picker_type == 'swatch'
+          assign picker_type = 'button'
+        endif
+      -%}
+
+      {% capture size_guide %}
+        {%- if option.name == block.settings.sizes_option and block.settings.size_guide_page != blank -%}
+          <menu-drawer class="product__size-guide section__drawer">
+            <details id="Size-Guide-drawer" class="drawer__container">
+              <summary class="drawer__button section__drawer-button">
+                <button class="button button--text">
+                {{- 'product.size_guide' | t -}}
+                </button>
+              </summary>
+              <div class="drawer__content js-drawer"
+                id="Size-Guide-menu-drawer"
+                tabindex="-1">
+                <button
+                  class="drawer__button-close button-reset no-js-hidden js-btn-close-drawer"
+                  aria-label="{{- 'theme.actions.close' | t -}}"
+                  aria-controls="Size-Guide-menu-drawer"
+                  aria-expanded="false"
+                >
+                  {%- render 'icon', icon_name: 'theme-close' -%}
+                </button>
+                <div class="drawer__row drawer__row--gutter-sm">
+                  <h2 class="drawer__title heading-static">
+                    {{- block.settings.size_guide_page.title -}}
+                  </h2>
+                  <div class="rte">
+                    {{- block.settings.size_guide_page.content -}}
+                  </div>
+                </div>
+              </div>
+            </details>
+          </menu-drawer>
+        {%- endif -%}
+      {% endcapture %}
+
+      {%- if picker_type == 'swatch' -%}
+        <fieldset class="js product-form__input product-form__input--swatch">
+          <legend class="form__label">
+            {{ option.name }}
+            <span data-selected-value>
+              {{- option.selected_value -}}
+            </span>
+          </legend>
+          {% render 'main-product__variant-options',
+            product: product,
+            option: option,
+            block: block,
+            picker_type: picker_type
+          %}
+        </fieldset>
+      {%- elsif picker_type == 'button' -%}
+        <fieldset class="js product-form__input product-form__input--pill">
+          <legend class="form__label"><div>{{ option.name }}{{- size_guide -}}</div></legend>
+          {% render 'main-product__variant-options',
+            product: product,
+            option: option,
+            block: block,
+            picker_type: picker_type
+          %}
+          {{- size_guide -}}
+        </fieldset>
+      {%- else -%}
+        {%- assign select_options_html = '' -%}
+        {%- capture select_option_html -%}
+          {% render 'main-product__variant-options',
+            product: product,
+            option: option,
+            block: block,
+            picker_type: picker_type
+          %}
+        {%- endcapture -%}
+        {%- assign select_options_html = select_options_html | append: select_option_html -%}
+
+        <div class="product-form__input product-form__input--dropdown">
+          <label class="form__label" for="Option-{{ section.id }}-{{ forloop.index0 }}">
+            {{ option.name }}
+          </label>
+          <div class="select">
+            {%- if picker_type == 'swatch_dropdown' -%}
+              <span
+                data-selected-value
+                class="dropdown-swatch"
+              >
+                {% render 'swatch', swatch: option.selected_value.swatch, shape: block.settings.swatch_shape %}
+              </span>
+            {%- endif -%}
+
+            {% assign select_input_id = "Option-{{ section.id }}-{{ forloop.index0 }}" %}
+            {% assign name = 'options' | append: '_' | append: section.id | append: '[' | append: option.name | append: ']' %}
+            {% render 'select-input', id: select_input_id, name: name, options: select_options_html, class: 'product-selector__dropdown' %}
+            {{- size_guide -}}
+          </div>
+        </div>
+      {% endif %}
+
+    {%- endfor -%}
+
+
+    <script type="application/json" data-selected-variant>{{ product.selected_or_first_available_variant | json }}</script>
+  </variant-selects>
+{%- endunless -%}

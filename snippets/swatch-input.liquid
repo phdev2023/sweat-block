@@ -1,0 +1,61 @@
+{% comment %}
+  Renders a swatch input component.
+  Accepts:
+  - id: {String} unique input id
+  - type: {String} input type. Accepts 'radio' or 'checkbox', defaults to 'radio' (optional)
+  - name: {String} input name,
+  - value: {ProductOptionValueDrop} input value
+  - swatch: {SwatchDrop} the swatch drop
+  - product_form_id: {String} id of the form associted with the input
+  - checked: {Boolean} default checked status
+  - disabled: {Boolean} default disabled status (optional)
+  - visually_disabled: {Boolean} style the swatch as disabled, but leave the input enabled (optional)
+  - shape: {String} swatch shape. Accepts 'square', defaults to circle (optional)
+  - help_text: {String} additional content to render inside the label (optional)
+  - additional_props: {String} (optional) additional properties to attach to the input
+
+  Usage:
+   {% render 'swatch-input',
+      id: input_id,
+      name: input_name,
+      value: input_value,
+      swatch: swatch,
+      product_form_id: product_form_id,
+      checked: checked
+    %}
+{% endcomment %}
+
+<input
+  type="{{ type | default: 'radio' }}"
+  id="{{ id }}"
+  name="{{ name }}"
+  value="{{ value }}"
+  form="{{ product_form_id }}"
+  class="swatch-input__input{% if visually_disabled %} visually-disabled{% endif %}"
+  {% if checked %}
+    checked
+  {% endif %}
+  {% if disabled %}
+    disabled
+  {% endif %}
+  {% if additional_props %}
+    {{ additional_props }}
+  {% endif %}
+>
+<label
+  for="{{ id }}"
+  title="{{ value }}"
+  class="swatch-input__label{% if settings.product_card_swatches_style_circle == false %} swatch-input__label--square{% endif %}{% if variant_img %} swatch-input__label--image{% endif %}"
+>
+  {% if variant_img %}
+    {% if variant_img != 'product-placeholder' %}
+      {% render 'image', image: variant_img, loading: 'eager' %}
+    {% else %}
+      {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+    {% endif %}
+  {% endif %}
+
+  {% render 'swatch', swatch_value: swatch_value, shape: shape, variant_img: variant_img %}
+
+  {{ help_text }}
+</label>

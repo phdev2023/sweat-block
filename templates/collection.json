@@ -1,0 +1,99 @@
+{
+  "sections": {
+    "page_banner_ajh7YU": {
+      "type": "page-banner",
+      "settings": {
+        "heading": "HANDS & FEET",
+        "heading_size": "h3",
+        "text": "",
+        "show_on_description": "desktop",
+        "content_position": "center",
+        "content_alignment": "center",
+        "media_position": "background",
+        "page_menu": "",
+        "enable_breadcrumbs": true,
+        "section_height": "33svh",
+        "show_controls_on_video": false,
+        "section_height_mobile": "50svh",
+        "show_controls_on_video_mobile": false,
+        "section_width": "max-w-narrow",
+        "color_scheme": "scheme-1",
+        "color_scheme_for_media": "",
+        "spacing_top": "1",
+        "spacing_bottom": "0"
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "blocks": {
+        "text_card_J6n8hm": {
+          "type": "text-card",
+          "settings": {
+            "color_scheme": "scheme-5",
+            "text": "<h3>Share info about your collection with your customers.<\/h3>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "button--text",
+            "button_alignment": "center",
+            "position": 7,
+            "column_factor": 2,
+            "row_factor": 2
+          }
+        },
+        "text_card_J6n8hn": {
+          "type": "text-card",
+          "settings": {
+            "color_scheme": "scheme-6",
+            "text": "<h3>Find strength in <br\/>stylish <em>women<\/em> <br\/>activewear<\/h3>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "button--text",
+            "button_alignment": "center",
+            "position": 13,
+            "column_factor": 1,
+            "row_factor": 1
+          }
+        }
+      },
+      "block_order": [
+        "text_card_J6n8hm",
+        "text_card_J6n8hn"
+      ],
+      "settings": {
+        "enable_products_count": true,
+        "enable_sorting": true,
+        "enable_filters": true,
+        "enable_opened_accordions": true,
+        "filters_shape": "squared",
+        "products_per_row": "3",
+        "products_per_row_mobile": "2",
+        "products_per_page": 12,
+        "pagination_style": "default",
+        "section_width": "max-w-page",
+        "color_scheme": "",
+        "spacing_top": "4",
+        "spacing_bottom": "0"
+      }
+    },
+    "f8303da3-c3cb-4a90-a63a-7a628615aa6f": {
+      "type": "seo-content",
+      "settings": {
+        "section_layout": "normal",
+        "heading": "Heading for SEO Content",
+        "heading_size": "h3",
+        "text": "<p>Enter your long text content here. This can include your store description or more detailed description of your brand.<\/p>",
+        "content_alignment": "center",
+        "section_width": "max-w-page",
+        "color_scheme": "scheme-5",
+        "spacing_inner": "2",
+        "spacing_top": "4",
+        "spacing_bottom": "4"
+      }
+    }
+  },
+  "order": [
+    "page_banner_ajh7YU",
+    "main",
+    "f8303da3-c3cb-4a90-a63a-7a628615aa6f"
+  ]
+}

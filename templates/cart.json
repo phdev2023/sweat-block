@@ -1,0 +1,36 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-cart",
+      "settings": {
+        "section_width": "max-w-page",
+        "color_scheme": "",
+        "spacing_top": "2",
+        "spacing_bottom": "2"
+      }
+    },
+    "13608375-b086-4634-863b-df6b4d0bc7ca": {
+      "type": "product-recommendations",
+      "settings": {
+        "layout": "layout-1",
+        "enable_slideshow_overflow": false,
+        "heading": "You may also like",
+        "subheading": "",
+        "button_style": "button--filled",
+        "show_navigation_arrows": true,
+        "slider_autoplay": 3,
+        "tabs_button_style": "tab-btn-filled",
+        "max_products": 8,
+        "show_unavailable_products": true,
+        "section_width": "max-w-page",
+        "color_scheme": "",
+        "spacing_top": "2",
+        "spacing_bottom": "2"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "13608375-b086-4634-863b-df6b4d0bc7ca"
+  ]
+}

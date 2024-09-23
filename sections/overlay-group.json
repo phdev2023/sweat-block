@@ -1,0 +1,32 @@
+{
+  "name": "t:sections.overlay.name",
+  "type": "custom.overlay",
+  "sections": {
+    "cart-drawer": {
+      "type": "cart-drawer",
+      "settings": {
+      }
+    },
+    "quick-cart-drawer": {
+      "type": "quick-cart-drawer",
+      "settings": {
+      }
+    },
+    "age-verification-popup": {
+      "type": "age-verification-popup",
+      "settings": {
+      }
+    },
+    "newsletter-popup": {
+      "type": "newsletter-popup",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "cart-drawer",
+    "quick-cart-drawer",
+    "age-verification-popup",
+    "newsletter-popup"
+  ]
+}

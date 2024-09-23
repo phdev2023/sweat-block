@@ -1,0 +1,747 @@
+{
+  "sections": {
+    "1658995208ad05f95f": {
+      "type": "hero-banner",
+      "blocks": {
+        "8d591e0b-d408-44f1-8bd2-9b71f529aa90": {
+          "type": "slide",
+          "settings": {
+            "banner_layout": "hero-banner--full",
+            "color_scheme": "scheme-6",
+            "header_menu_text_color": "#ffffff",
+            "heading": "<p>Full Width <em>Hero<\/em> Banner<\/p>",
+            "subheading": "Highlight Your Promotion",
+            "subheading_link": "",
+            "text": "<p>Give customers details about the banner image or content on the template.<\/p>",
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify:\/\/collections",
+            "button_style_1": "button--filled",
+            "button_label_2": "Explore",
+            "button_link_2": "",
+            "button_style_2": "button--outlined",
+            "image": "shopify:\/\/shop_images\/6_b947ed8e-1cd8-4bf1-8fdb-8a2ab55ae946.jpg",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "enable_media_overlay_desktop": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "enable_media_overlay_mobile": true
+          }
+        },
+        "slide_aQizGj": {
+          "type": "slide",
+          "settings": {
+            "banner_layout": "hero-banner--70-30",
+            "color_scheme": "scheme-5",
+            "header_menu_text_color": "#ffffff",
+            "heading": "<p>70-30 Hero <em>Banner<\/em><\/p>",
+            "subheading": "Highlight Your Promotion",
+            "subheading_link": "",
+            "text": "<p>Give customers details about the banner image or content on the template.<\/p>",
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify:\/\/collections",
+            "button_style_1": "button--filled",
+            "button_label_2": "Explore",
+            "button_link_2": "shopify:\/\/collections\/all",
+            "button_style_2": "button--outlined",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "enable_media_overlay_desktop": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "enable_media_overlay_mobile": true
+          }
+        },
+        "slide_BdeRpH": {
+          "type": "slide",
+          "settings": {
+            "banner_layout": "hero-banner--30-70",
+            "color_scheme": "scheme-5",
+            "header_menu_text_color": "#ffffff",
+            "heading": "<p>30-70 Hero <em>Banner<\/em><\/p>",
+            "subheading": "Highlight Your Promotion",
+            "subheading_link": "",
+            "text": "<p>Give customers details about the banner image or content on the template.<\/p>",
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify:\/\/collections",
+            "button_style_1": "button--filled",
+            "button_label_2": "Explore",
+            "button_link_2": "shopify:\/\/collections\/all",
+            "button_style_2": "button--outlined",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "enable_media_overlay_desktop": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "enable_media_overlay_mobile": true
+          }
+        },
+        "slide_6VWqy8": {
+          "type": "slide",
+          "settings": {
+            "banner_layout": "hero-banner--split",
+            "color_scheme": "scheme-5",
+            "header_menu_text_color": "#ffffff",
+            "heading": "<p>Split Hero Banner<\/p>",
+            "subheading": "Highlight Your Promotion",
+            "subheading_link": "",
+            "text": "<p>Give customers details about the banner image or content on the template.<\/p>",
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify:\/\/collections",
+            "button_style_1": "button--filled",
+            "button_label_2": "Explore",
+            "button_link_2": "shopify:\/\/collections\/all",
+            "button_style_2": "button--outlined",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "enable_media_overlay_desktop": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "enable_media_overlay_mobile": true
+          }
+        }
+      },
+      "block_order": [
+        "8d591e0b-d408-44f1-8bd2-9b71f529aa90",
+        "slide_aQizGj",
+        "slide_BdeRpH",
+        "slide_6VWqy8"
+      ],
+      "settings": {
+        "slider_height": 70,
+        "slideshow_autoplay_interval": 0,
+        "show_slideshow_navigation": true,
+        "slideshow_navigation_position": "hero__swiper-buttons--sides",
+        "color_scheme_arrows": "scheme-6",
+        "show_slideshow_pagination": false,
+        "slideshow_pagination_style": "style-2",
+        "floating_bar": false
+      }
+    },
+    "featured_products_pxPrEd": {
+      "type": "featured-products",
+      "blocks": {
+        "collection_PD3Rty": {
+          "type": "collection",
+          "settings": {
+            "title": "",
+            "collection": "best-sellers",
+            "products": [
+
+            ],
+            "vendor": "",
+            "collection_of_products": "",
+            "show_unavailable_products": false
+          }
+        }
+      },
+      "block_order": [
+        "collection_PD3Rty"
+      ],
+      "settings": {
+        "layout": "layout-1",
+        "heading": "Best Sellers",
+        "heading_size": "h3",
+        "subheading": "",
+        "button_label": "View all",
+        "button_link": "",
+        "button_style": "button--text",
+        "max_products": 8,
+        "enable_slideshow_overflow": false,
+        "show_navigation_arrows": true,
+        "slideshow_autoplay_interval": 0,
+        "tab_button_style": "button--filled",
+        "section_width": "max-w-page",
+        "color_scheme": "scheme-1",
+        "spacing_top": "2",
+        "spacing_bottom": "2"
+      }
+    },
+    "callout_banner_rVDLqh": {
+      "type": "callout-banner",
+      "disabled": true,
+      "settings": {
+        "section_layout": "vertical",
+        "media_position": "full",
+        "subheading": "Callout tagline",
+        "heading": "Callout heading",
+        "heading_size": "h2",
+        "text": "<p>Add descriptive text for your calldown here.<\/p>",
+        "action_preference": "newsletter_form",
+        "button_label": "Shop Sale",
+        "button_link": "",
+        "newsletter_button_label": "Submit",
+        "button_style": "button--outlined",
+        "show_timer": true,
+        "timer_layout": "2",
+        "timer_size": "h1",
+        "timer_year": 2024,
+        "timer_month": "09",
+        "timer_day": 1,
+        "timer_hour": 0,
+        "timer_minute": 0,
+        "timer_end_message": "Sale has ended",
+        "show_timer_days": true,
+        "show_timer_hours": true,
+        "show_timer_minutes": true,
+        "show_timer_seconds": true,
+        "section_width": "max-w-full",
+        "color_scheme": "",
+        "color_scheme_for_content": "scheme-3",
+        "spacing_top": "0",
+        "spacing_bottom": "0"
+      }
+    },
+    "full_width_banner_JMAceU": {
+      "type": "full-width-banner",
+      "blocks": {
+        "subheading_gUTqPz": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Your Brand Tagline",
+            "link": ""
+          }
+        },
+        "heading_Ymr9i7": {
+          "type": "heading",
+          "settings": {
+            "block_width": "max-w-narrow",
+            "heading": "Tell your <em>brand's story<\/em> through images",
+            "heading_size": "h2"
+          }
+        },
+        "buttons_7BWxeA": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop new in",
+            "button_link_1": "shopify:\/\/collections",
+            "button_style_1": "button--filled",
+            "color_scheme_first_button": "scheme-6",
+            "button_label_2": "Shop all",
+            "button_link_2": "shopify:\/\/collections\/all",
+            "button_style_2": "button--outlined",
+            "color_scheme_second_button": "scheme-6"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_gUTqPz",
+        "heading_Ymr9i7",
+        "buttons_7BWxeA"
+      ],
+      "settings": {
+        "media_position": "background",
+        "section_height": "half",
+        "content_position": "center",
+        "content_alignment": "center",
+        "video_external": "",
+        "show_controls_on_video": false,
+        "section_height_mobile": "half",
+        "content_position_mobile": "center",
+        "content_alignment_mobile": "center",
+        "video_external_mobile": "",
+        "show_controls_on_video_mobile": false,
+        "section_width": "max-w-fluid",
+        "color_scheme": "scheme-1",
+        "color_scheme_for_content": "scheme-6",
+        "spacing_inner": "2",
+        "spacing_top": "0",
+        "spacing_bottom": "0"
+      }
+    },
+    "dual_tiles_nqzRrp": {
+      "type": "dual-tiles",
+      "blocks": {
+        "tile_6dBhBr": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "color_scheme": "",
+            "custom_background_color": "",
+            "heading": "Heading for Dual Content Tiles",
+            "heading_size": "h3",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "button--filled",
+            "product": "",
+            "product_width": 24,
+            "aspect_ratio": "2\/1",
+            "vertical_position": "stretch",
+            "content_position": "justify-center",
+            "content_alignment": "text-center align-center",
+            "product_position": "between",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "aspect_ratio_mobile": "auto",
+            "content_alignment_mobile": "text-center--mobile align-center--mobile",
+            "content_position_mobile": "justify-center--mobile",
+            "product_position_mobile": "between",
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "3"
+          }
+        },
+        "tile_VyJCGQ": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "color_scheme": "",
+            "custom_background_color": "",
+            "heading": "Heading for Dual Content Tiles",
+            "heading_size": "h3",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "button--filled",
+            "product": "",
+            "product_width": 24,
+            "aspect_ratio": "auto",
+            "vertical_position": "stretch",
+            "content_position": "justify-center",
+            "content_alignment": "text-center align-center",
+            "product_position": "between",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "aspect_ratio_mobile": "auto",
+            "content_alignment_mobile": "text-center--mobile align-center--mobile",
+            "content_position_mobile": "justify-center--mobile",
+            "product_position_mobile": "between",
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "3"
+          }
+        }
+      },
+      "block_order": [
+        "tile_6dBhBr",
+        "tile_VyJCGQ"
+      ],
+      "settings": {
+        "section_layout": "seperated",
+        "block_size": "half",
+        "block_order_mobile": false,
+        "color_scheme": "scheme-5",
+        "section_width": "max-w-page",
+        "spacing_top": "4",
+        "spacing_bottom": "4"
+      }
+    },
+    "dual_tiles_m3b67h": {
+      "type": "dual-tiles",
+      "blocks": {
+        "tile_HeTLXM": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "color_scheme": "scheme-5",
+            "custom_background_color": "",
+            "heading": "Heading for Dual Content Tiles",
+            "heading_size": "h3",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "button--outlined",
+            "product": "",
+            "product_width": 24,
+            "aspect_ratio": "1\/1",
+            "vertical_position": "stretch",
+            "content_position": "justify-center",
+            "content_alignment": "text-center align-center",
+            "product_position": "between",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "aspect_ratio_mobile": "auto",
+            "content_alignment_mobile": "text-center--mobile align-center--mobile",
+            "content_position_mobile": "justify-center--mobile",
+            "product_position_mobile": "between",
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "3"
+          }
+        },
+        "tile_njA7C9": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "color_scheme": "scheme-4",
+            "custom_background_color": "",
+            "heading": "Heading for Dual Content Tiles",
+            "heading_size": "h3",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "button--outlined",
+            "product": "",
+            "product_width": 16,
+            "aspect_ratio": "auto",
+            "vertical_position": "stretch",
+            "content_position": "justify-center",
+            "content_alignment": "text-center align-center",
+            "product_position": "after",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "aspect_ratio_mobile": "auto",
+            "content_alignment_mobile": "text-center--mobile align-center--mobile",
+            "content_position_mobile": "justify-center--mobile",
+            "product_position_mobile": "after",
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "3"
+          }
+        }
+      },
+      "block_order": [
+        "tile_HeTLXM",
+        "tile_njA7C9"
+      ],
+      "settings": {
+        "section_layout": "stacked",
+        "block_size": "half",
+        "block_order_mobile": false,
+        "color_scheme": "scheme-1",
+        "section_width": "max-w-page",
+        "spacing_top": "4",
+        "spacing_bottom": "0"
+      }
+    },
+    "dual_tiles_zNy4gJ": {
+      "type": "dual-tiles",
+      "blocks": {
+        "tile_jNA9rd": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "color_scheme": "scheme-6",
+            "custom_background_color": "",
+            "heading": "Heading for Dual Content Tiles",
+            "heading_size": "h3",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "button--text",
+            "product": "",
+            "product_width": 24,
+            "aspect_ratio": "auto",
+            "vertical_position": "stretch",
+            "content_position": "justify-center",
+            "content_alignment": "text-center align-center",
+            "product_position": "between",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "aspect_ratio_mobile": "auto",
+            "content_alignment_mobile": "text-center--mobile align-center--mobile",
+            "content_position_mobile": "justify-center--mobile",
+            "product_position_mobile": "between",
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "3"
+          }
+        },
+        "tile_rXf6jX": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "color_scheme": "scheme-3",
+            "custom_background_color": "",
+            "heading": "Heading for Dual Content Tiles",
+            "heading_size": "h3",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "button--text",
+            "product": "",
+            "product_width": 24,
+            "aspect_ratio": "auto",
+            "vertical_position": "stretch",
+            "content_position": "justify-center",
+            "content_alignment": "text-center align-center",
+            "product_position": "between",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "aspect_ratio_mobile": "auto",
+            "content_alignment_mobile": "text-center--mobile align-center--mobile",
+            "content_position_mobile": "justify-center--mobile",
+            "product_position_mobile": "between",
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "3"
+          }
+        }
+      },
+      "block_order": [
+        "tile_jNA9rd",
+        "tile_rXf6jX"
+      ],
+      "settings": {
+        "section_layout": "seperated",
+        "block_size": "half",
+        "block_order_mobile": false,
+        "color_scheme": "scheme-1",
+        "section_width": "max-w-fluid",
+        "spacing_top": "4",
+        "spacing_bottom": "4"
+      }
+    },
+    "testimonials_CMyt3F": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_qXzkny": {
+          "type": "testimonial",
+          "settings": {
+            "author": "Alex Thompson",
+            "quote": "<p>After trying countless products, I finally found the perfect match with this brand; my skin has never looked better, and the ordering process was a breeze!<\/p>",
+            "rating_score": 5,
+            "color_scheme": "scheme-1"
+          }
+        },
+        "testimonial_NUmDwd": {
+          "type": "testimonial",
+          "settings": {
+            "author": "Michael Richards",
+            "quote": "<p>The results are astounding—my skin feels rejuvenated, and the fast shipping and eco-friendly packaging were the cherries on top!<\/p>",
+            "rating_score": 4,
+            "color_scheme": "scheme-1"
+          }
+        },
+        "testimonial_KRiPJ3": {
+          "type": "testimonial",
+          "settings": {
+            "author": "David Lee",
+            "quote": "<p>Exceptional quality and affordable prices; this skincare line has made a noticeable difference in my complexion, and I love the natural ingredients they use!<\/p>",
+            "rating_score": 5,
+            "color_scheme": "scheme-1"
+          }
+        },
+        "testimonial_jbrGqN": {
+          "type": "testimonial",
+          "settings": {
+            "author": "Jonathan Carter",
+            "quote": "<p>Five stars all the way! The customer service was outstanding, and my sensitive skin is now smooth and clear thanks to their gentle formulas.<\/p>",
+            "rating_score": 5,
+            "color_scheme": "scheme-1"
+          }
+        },
+        "testimonial_KTQxBa": {
+          "type": "testimonial",
+          "settings": {
+            "author": "Chris Wu",
+            "quote": "<p>I'm genuinely impressed with the effectiveness of these products; they've transformed my skincare routine, and I've received so many compliments on my improved skin!<\/p>",
+            "rating_score": 5,
+            "color_scheme": "scheme-1"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_qXzkny",
+        "testimonial_NUmDwd",
+        "testimonial_KRiPJ3",
+        "testimonial_jbrGqN",
+        "testimonial_KTQxBa"
+      ],
+      "settings": {
+        "heading": "Testimonials",
+        "heading_size": "h3",
+        "subheading": "",
+        "rating_icon": "star",
+        "layout": "horizontal-w-media",
+        "slider_autoplay": 3,
+        "image_position": "image-start",
+        "image_aspect_ratio": "1 \/ 1",
+        "media_show_on": "desktop",
+        "spacing_inner": "2",
+        "section_width": "max-w-fluid",
+        "color_scheme": "scheme-5",
+        "spacing_top": "2",
+        "spacing_bottom": "2"
+      }
+    },
+    "blog_articles_ThCgzt": {
+      "type": "blog-articles",
+      "settings": {
+        "heading": "Blog",
+        "heading_size": "h3",
+        "blog": "",
+        "button_text": "Visit Blog",
+        "layout": "layout-1",
+        "card_media_aspect_ratio": "4\/3",
+        "show_excerpt": false,
+        "show_date": true,
+        "show_author": true,
+        "show_read_more": true,
+        "content_alignment": "text-start",
+        "button_style": "button--text",
+        "section_width": "max-w-page",
+        "color_scheme": "scheme-1",
+        "spacing_grid": "2",
+        "spacing_top": "6",
+        "spacing_bottom": "6"
+      }
+    },
+    "social_media_highlights_fVaa73": {
+      "type": "social-media-highlights",
+      "blocks": {
+        "image_m9bXnL": {
+          "type": "image",
+          "settings": {
+            "image_url": ""
+          }
+        },
+        "image_34bPnK": {
+          "type": "image",
+          "settings": {
+            "image_url": ""
+          }
+        },
+        "image_Y3B3TH": {
+          "type": "image",
+          "settings": {
+            "image_url": ""
+          }
+        },
+        "image_Lcx9JC": {
+          "type": "image",
+          "settings": {
+            "image_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_m9bXnL",
+        "image_34bPnK",
+        "image_Y3B3TH",
+        "image_Lcx9JC"
+      ],
+      "settings": {
+        "layout": "default",
+        "heading": "Join the <em>family<\/em>",
+        "heading_size": "h3",
+        "subheading": "",
+        "button_label": "Follow us",
+        "button_link": "",
+        "button_style": "button--outlined",
+        "button_icon": "brand-instagram",
+        "content_card_color_scheme": "",
+        "media_aspect_ratio": "auto",
+        "autoplay_speed": 8,
+        "section_width": "max-w-full",
+        "color_scheme": "scheme-1",
+        "spacing_top": "6",
+        "spacing_bottom": "6"
+      }
+    },
+    "compare_slider_FCDTTc": {
+      "type": "compare-slider",
+      "blocks": {
+        "image_before_slide_XUaPRb": {
+          "type": "image-before-slide",
+          "settings": {
+            "title": "Image before",
+            "color_scheme": ""
+          }
+        },
+        "image_after_slide_6y9WQj": {
+          "type": "image-after-slide",
+          "settings": {
+            "title": "Image after",
+            "color_scheme": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_before_slide_XUaPRb",
+        "image_after_slide_6y9WQj"
+      ],
+      "settings": {
+        "section_layout": "shrink",
+        "heading": "Before \/ <em>After<\/em>",
+        "heading_size": "h3",
+        "text": "<p>Before and after images are a great way to showcase the transformation or improvement in a particular subject.<\/p>",
+        "button_label": "Shop now",
+        "button_link": "\/",
+        "button_style": "button--filled",
+        "media_aspect_ratio": "3\/2",
+        "section_width": "max-w-page",
+        "color_scheme": "scheme-1",
+        "spacing_top": "2",
+        "spacing_bottom": "2"
+      }
+    },
+    "marquees_TFD63r": {
+      "type": "marquees",
+      "blocks": {
+        "item_gj8RYW": {
+          "type": "item",
+          "settings": {
+            "icon": "theme-box",
+            "title": "Store Specification 1",
+            "link": ""
+          }
+        },
+        "item_Nze9Bw": {
+          "type": "item",
+          "settings": {
+            "icon": "theme-box",
+            "title": "Store Specification 2",
+            "link": ""
+          }
+        },
+        "item_K93HdY": {
+          "type": "item",
+          "settings": {
+            "icon": "theme-box",
+            "title": "Store Specification 3",
+            "link": ""
+          }
+        },
+        "item_JUfXV4": {
+          "type": "item",
+          "settings": {
+            "icon": "theme-box",
+            "title": "Store Specification 4",
+            "link": ""
+          }
+        },
+        "item_bEFyRA": {
+          "type": "item",
+          "settings": {
+            "icon": "theme-box",
+            "title": "Store Specification 5",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_gj8RYW",
+        "item_Nze9Bw",
+        "item_K93HdY",
+        "item_JUfXV4",
+        "item_bEFyRA"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable_animation": true,
+        "marquee_duration_rate": 10,
+        "marquee_font_size": 6,
+        "marquee_items_spacing": 6,
+        "color_scheme": "",
+        "spacing_top": "0",
+        "spacing_bottom": "0"
+      }
+    }
+  },
+  "order": [
+    "1658995208ad05f95f",
+    "featured_products_pxPrEd",
+    "callout_banner_rVDLqh",
+    "full_width_banner_JMAceU",
+    "dual_tiles_nqzRrp",
+    "dual_tiles_m3b67h",
+    "dual_tiles_zNy4gJ",
+    "testimonials_CMyt3F",
+    "blog_articles_ThCgzt",
+    "social_media_highlights_fVaa73",
+    "compare_slider_FCDTTc",
+    "marquees_TFD63r"
+  ]
+}

@@ -1,0 +1,327 @@
+{% assign zoom_modal = section.settings.display_media_zoom %}
+{% comment %} This prevents init without save on customiser {% endcomment %}
+{% comment %} {% unless zoom_modal == 'none' %} {% endcomment %}
+<link data-photoswipe rel="stylesheet" href="{{- 'photoswipe.css' | asset_url -}}" media="print" onload="this.media='all'">
+<script data-photoswipe src="{{- 'photoswipe.umd.min.js' | asset_url -}}" defer="defer"></script>
+<script data-photoswipe src="{{- 'photoswipe-lightbox.umd.min.js' | asset_url -}}" defer="defer"></script>
+{% comment %} {% endunless %} {% endcomment %}
+
+<script src="{{ 'product-media-gallery.js' | asset_url }}" defer="defer"></script>
+
+{%- liquid
+  assign product_images = product.media | where: 'media_type', 'image'
+  assign product_models = product.media | where: 'media_type', 'model'
+  assign product_local_videos = product.media | where: 'media_type', 'video'
+  assign product_external_videos = product.media | where: 'media_type', 'external_video'
+  assign product_videos = product_local_videos | concat: product_external_videos
+  assign product_media = product_images | concat: product_models | concat: product_videos | sort: 'position'
+-%}
+
+{% style %}
+  #shopify-section-{{ section.id }} .main-product__media {
+    --product-media-aspect-ratio: {% if section.settings.product_media_aspect_ratio == 'fit' %}auto{% else %}{{ section.settings.product_media_aspect_ratio | default: 'auto' }}{% endif %};
+    --product-thumbs-aspect-ratio: {{ section.settings.product_media_thumbs_ratio | default: 'auto' }};
+    --product-media-object-fit: {{ section.settings.product_media_object_fit | default: 'cover' }};
+    --product-thumbs-object-fit: {{ section.settings.product_media_thumbs_object_fit | default: 'cover' }};
+  }
+  {%- if section.settings.media_transparent_background -%}
+    .main-product__media .swiper--product-gallery .media {
+      background-color: transparent;
+    }
+  {%- endif -%}
+{% endstyle %}
+
+{% comment %} MEDI GALLERY SLIDER NAVIGATIONS {% endcomment %}
+{%- liquid
+  assign thumbs_desktop = true
+  assign thumbs_mobile = true
+  if section.settings.product_media_with_thumbs == 'only_mobile' or section.settings.product_media_with_thumbs == 'none'
+    assign thumbs_desktop = false
+  endif
+  if section.settings.product_media_with_thumbs == 'only_desktop' or section.settings.product_media_with_thumbs == 'none'
+    assign thumbs_mobile = false
+  endif
+
+  assign arrows_mobile = true
+  if section.settings.gallery_arrows_show_on == 'desktop' or section.settings.gallery_arrows_show_on == 'none'
+    assign arrows_mobile = false
+  endif
+
+  assign pagination = false
+  if thumbs_mobile == false and section.settings.display_media_gallery_pagination != 'none' or thumbs_mobile == false and arrows_mobile == false
+    assign pagination = true
+  endif
+-%}
+
+{% comment %} METAFIELD FEATURES - MEDIA INFO {% endcomment %}
+{%- capture metafield_media_info -%}
+  {% if section.settings.media_gallery_info != blank %}
+    <product-media-info class="main-product__media--feat main-product__media--feat-media-info color-{{ section.settings.color_scheme_gallery }} gradient" style="opacity: 0">
+      <div class="product__media--info">
+        <div class="product__media--info-marquee">
+          <p aria-hidden="true">{{- section.settings.media_gallery_info -}}</p>
+          <p>{{- section.settings.media_gallery_info -}}</p>
+        </div>
+      </div>
+    </product-media-info>
+  {% endif %}
+{%- endcapture -%}
+
+{% comment %} METAFIELD FEATURES - AS SEEN ON {% endcomment %}
+{%- capture metafield_media_as_seen_on -%}
+  {% if section.settings.metafield_as_seen_on != blank %}
+    {%- liquid
+      assign metafield_as_seen_on_namespace = section.settings.metafield_as_seen_on | split: '.' | first
+      assign metafield_as_seen_on_key = section.settings.metafield_as_seen_on | split: '.' | last
+      assign metafield_as_seen_on = product.metafields[metafield_as_seen_on_namespace][metafield_as_seen_on_key]
+    -%}
+    {% if metafield_as_seen_on != blank %}
+      <div class="main-product__media--feat main-product__media--feat-as-seen-on color-{{ section.settings.color_scheme_gallery }} gradient">
+        {%- render 'product-as-seen-on', product: product, metafield_as_seen_on: metafield_as_seen_on -%}
+      </div>
+    {% endif %}
+  {% endif %}
+{%- endcapture -%}
+
+{% comment %}
+  CHECK PRODUCT MEDIA HAS SAME ASPECT RATIO
+  If all product media has same aspect ratio,
+  then disable slider auto height to prevent aspect ratio settings overwriting
+{% endcomment %}
+{%- liquid
+  assign product_media_has_same_aspect_ratio = true
+  assign product_media_first_aspect_ratio = product_media.first.aspect_ratio
+  for media in product_media
+    unless forloop.first
+      if media.aspect_ratio != product_media_first_aspect_ratio
+        assign product_media_has_same_aspect_ratio = false
+        break
+      endif
+    endunless
+  endfor
+  assign product_slider_auto_height = section.settings.product_slider_auto_height | default: false
+  if product_media_has_same_aspect_ratio == true
+    assign product_slider_auto_height = false
+  endif
+-%}
+
+<div
+  class="main-product__media "
+  {% if section.settings.product_media_aspect_ratio == 'fit' %}data-height-limited{% endif %}
+  {% if product_slider_auto_height %}data-slider-auto-height{% endif %}
+  data-with-thumbs="{{ section.settings.product_media_with_thumbs }}"
+  {% if section.settings.product_media_layout == 'product__media-layout--grid' %}data-desktop-grid{% endif %}
+  {% if topbar_mobile == 'on-top' %}data-mobile-topbar{% endif %}
+  {% if product_has_single_media %}data-single-media{% endif %}
+>
+  {% unless product_has_single_media %}
+    {% comment %} SLIDER - PRODUCT MEDIA {% endcomment %}
+    <div
+      class="main-product__media--slider-wrapper{% if section.settings.product_media_layout == 'product__media-layout--grid' %} small-up-hide{% endif %}"
+      data-layout-desktop="{{- section.settings.product_media_layout -}}"
+      data-layout-mobile="{{- section.settings.product_media_layout_mobile -}}"
+    >
+      {% comment %} METAFIELD FEATURES - SLIDER {% endcomment %}
+      <div class="main-product__media--features">
+        {{- metafield_media_info -}}
+        {{- metafield_media_as_seen_on -}}
+      </div>
+      <div class="main-product__media--slider">
+        <swiper-product-gallery
+          handle="product-gallery"
+          {% unless section.settings.product_media_with_thumbs == 'none' %}thumbs="product-thumbs"{% endunless %}
+          {% unless zoom_modal == 'none' %}zoom="{{- zoom_modal -}}"{% endunless %}
+        >
+          {%- liquid
+            assign product_gallery_slides = ''
+            if product_media.size > 0
+              for media in product_media
+                capture product_gallery_slides
+                  echo product_gallery_slides
+                  render 'product-media-card', media: media, card_type: 'slide', zoom_modal: zoom_modal, media_index: forloop.index0, section_index: section.index
+                endcapture
+              endfor
+            endif
+          -%}
+          {% capture product_gallery_options %}
+          {% if pagination %}
+            {
+              "navigation": {
+                "nextEl": ".swiper-button-next",
+                "prevEl": ".swiper-button-prev"
+              },
+              "pagination": {
+                "el": ".swiper--product-gallery__pagination",
+                "clickable": false,
+                "dynamicBullets": {% if section.settings.display_media_gallery_pagination == 'dynamic' %}true{% else %}false{% endif %}
+              },
+              "autoHeight": {{ product_slider_auto_height }},
+              {% if section.settings.product_media_layout_mobile == 'product__media-layout--partial--sm' %}
+                "spaceBetween": 8,
+                "slidesPerView": 1.125,
+              {% endif %}
+              "breakpoints": {
+                "750": {
+                  "pagination": false,
+                  "spaceBetween": 8
+                  {% if section.settings.product_media_layout == 'product__media-layout--partial' %},
+                    "slidesPerView": 1.5
+                  {% elsif section.settings.product_media_layout == 'product__media-layout--full' %},
+                    "slidesPerView": 1
+                  {% endif %}
+                }
+              }
+            }
+          {% else %}
+            {
+              "navigation": {
+                "nextEl": ".swiper-button-next",
+                "prevEl": ".swiper-button-prev"
+              },
+              "autoHeight": {{ product_slider_auto_height }}
+              {% if section.settings.product_media_layout_mobile == 'product__media-layout--partial--sm' %},
+                "spaceBetween": 8,
+                "slidesPerView": 1.125
+              {% endif %}
+              {% if section.settings.product_media_layout == 'product__media-layout--partial' %},
+                "breakpoints": {
+                  "750": {
+                    "spaceBetween": 8,
+                    "slidesPerView": 1.5
+                  }
+                }
+              {% elsif section.settings.product_media_layout == 'product__media-layout--full' %},
+                "breakpoints": {
+                  "750": {
+                    "spaceBetween": 8,
+                    "slidesPerView": 1
+                  }
+                }
+              {% endif %}
+            }
+          {% endif %}
+          {% endcapture %}
+          {% render 'instance-swiper',
+            handle: 'product-gallery',
+            options: product_gallery_options,
+            slides: product_gallery_slides,
+            arrows: section.settings.gallery_arrows_show_on
+          %}
+        </swiper-product-gallery>
+      </div>
+    </div>
+
+    {% unless section.settings.product_media_with_thumbs == 'none' %}
+      {% comment %} THUMBS - PRODUCT MEDIA {% endcomment %}
+      <div class="main-product__media--thumbs-wrapper{% unless thumbs_mobile and thumbs_desktop %}{% if thumbs_mobile %} small-up-hide{% elsif thumbs_desktop %} small-hide{% endif %}{% endunless %}{% if section.settings.product_media_layout == 'product__media-layout--grid' %} small-up-hide{% endif %}">
+        <swiper-product-thumbs handle="product-thumbs">
+          {% capture product_thumbs_options %}
+          {
+            "direction": "horizontal",
+            {% if product.media.size > 5 %}
+            "centeredSlides": true,
+            "centeredSlidesBounds": true,
+            {% endif %}
+            "freeMode": true,
+            "mousewheel": true,
+            "slidesPerView": "auto",
+            "spaceBetween": 8,
+            "breakpoints": {
+              "750": {
+                {% unless product.media.size > 5 %}
+                "centeredSlides": true,
+                "centeredSlidesBounds": true,
+                {% endunless %}
+                "spaceBetween": 16,
+                "direction": "horizontal"
+              },
+              "990": {
+                {% unless product.media.size > 5 %}
+                "centeredSlides": true,
+                "centeredSlidesBounds": true,
+                {% endunless %}
+                "spaceBetween": 16,
+                "direction": "vertical"
+              }
+            }
+          }
+          {% endcapture %}
+          {%- liquid
+            assign product_thumbs_slides = ''
+            if product_media.size > 0
+              for media in product_media
+                capture product_thumbs_slides
+                  echo product_thumbs_slides
+                  render 'product-media-card', media: media, card_type: 'thumbs', zoom_modal: zoom_modal, media_index: forloop.index0, section_index: section.index
+                endcapture
+              endfor
+            endif
+          -%}
+          {% render 'instance-swiper',
+            handle: 'product-thumbs',
+            options: product_thumbs_options,
+            slides: product_thumbs_slides
+          %}
+        </swiper-product-thumbs>
+      </div>
+    {% endunless %}
+
+    {% if section.settings.product_media_layout == 'product__media-layout--grid' %}
+      {% comment %} GRID - PRODUCT MEDIA {% endcomment %}
+      <div class="main-product__media--grid small-hide photoswipe-wrapper">
+        {%- if product_media.size > 0 -%}
+          {%- for media in product_media -%}
+            <div class="main-product__media--grid-item">
+              {% comment %} METAFIELD FEATURES - GRID {% endcomment %}
+              {% if forloop.first or forloop.index0 == 1 %}
+                <div class="main-product__media--features">
+                  {% if forloop.first %}{{- metafield_media_as_seen_on -}}{% endif %}
+                  {% if forloop.index0 == 1 %}{{- metafield_media_info -}}{% endif %}
+                </div>
+              {% endif %}
+              {%- render 'product-media-card', media: media, card_type: 'grid', zoom_modal: zoom_modal, media_index: forloop.index0, section_index: section.index -%}
+            </div>
+          {%- endfor -%}
+        {%- endif -%}
+      </div>
+    {% endif %}
+  {% else %}
+    {% comment %} SINGLE PRODUCT MEDIA {% endcomment %}
+    {% assign media = product_media.first %}
+    <div class="main-product__media--grid-item">
+      {% comment %} METAFIELD FEATURES - GRID {% endcomment %}
+      {% if forloop.first or forloop.index0 == 1 %}
+        <div class="main-product__media--features">
+          {% if forloop.first %}{{- metafield_media_as_seen_on -}}{% endif %}
+          {% if forloop.index0 == 1 %}{{- metafield_media_info -}}{% endif %}
+        </div>
+      {% endif %}
+      {%- render 'product-media-card', media: media, card_type: 'grid', zoom_modal: zoom_modal, media_index: forloop.index0, section_index: section.index -%}
+    </div>
+  {% endunless %}
+
+</div>
+
+{% comment %}
+ PAGINATION - PRODUCT MEDIA GALLERY
+ Please don't move elsewhere!
+ Out and after grid is relatively right place
+ and it's been bind by specific class name , works exactly fine (:
+{% endcomment %}
+{% if pagination %}
+  <div class="swiper--product-gallery__pagination swiper-pagination{% if section.settings.display_media_gallery_pagination == 'dynamic' or section.settings.display_media_gallery_pagination == 'lines' %} swiper-pagination--{{ section.settings.display_media_gallery_pagination }}{% endif %} small-up-hide{% if section.settings.product_media_layout_mobile == 'product__media-layout--partial--sm' %} swiper-pagination--carousel{% endif %}"></div>
+{% endif %}
+
+
+{% unless zoom_modal == 'none' %}
+  {% comment %} ZOOM MODAL BUTTONS {% endcomment %}
+  <div class="hidden" data-close-icon>
+    {%- render 'icon', icon_name: 'theme-close' -%}
+  </div>
+  <div class="hidden" data-prev-icon>
+    {%- render 'icon', icon_name: 'theme-chevron', class: 'icon--rotate-180' -%}
+  </div>
+  <div class="hidden" data-next-icon>
+    {%- render 'icon', icon_name: 'theme-chevron' -%}
+  </div>
+{% endunless %}

@@ -1,0 +1,624 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "goback_zMzywG": {
+          "type": "goback",
+          "settings": {
+            "goback_style": "filled",
+            "goback_label": "",
+            "display_goback_mobile": "on-media"
+          }
+        },
+        "breadcrumbs_JRrp9d": {
+          "type": "breadcrumbs",
+          "settings": {
+          }
+        },
+        "text_w7iGN6": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "spacing_bottom": "1",
+            "heading": "",
+            "icon": "theme-check",
+            "link_to_resource": "vendor",
+            "text_before_link": false,
+            "heading_secondary": ""
+          }
+        },
+        "badge_dC66pN": {
+          "type": "badge",
+          "settings": {
+            "spacing_bottom": "1"
+          }
+        },
+        "1e0c79e9-7de0-4eee-b9c5-f27132635fb8": {
+          "type": "title",
+          "settings": {
+            "spacing_bottom": "1"
+          }
+        },
+        "8effeb43-55b7-4ec4-ab9b-68bcd89b865b": {
+          "type": "price",
+          "settings": {
+            "spacing_bottom": "1",
+            "show_price_tax_info": true,
+            "show_price_shipping_info": true,
+            "show_price_custom_info": ""
+          }
+        },
+        "b2dabe12-2158-4ba6-bc54-9baae453acf5": {
+          "type": "text",
+          "settings": {
+            "spacing_bottom": "1",
+            "heading": "Free delivery and shipping",
+            "icon": "theme-check",
+            "link_to_resource": "none",
+            "text_before_link": false,
+            "heading_secondary": ""
+          }
+        },
+        "1ad0121e-439d-45c0-b45d-4f080836ade5": {
+          "type": "text",
+          "settings": {
+            "spacing_bottom": "1",
+            "heading": "Secure online payment",
+            "icon": "theme-check",
+            "link_to_resource": "none",
+            "text_before_link": false,
+            "heading_secondary": ""
+          }
+        },
+        "text_VjFnJy": {
+          "type": "text",
+          "settings": {
+            "spacing_bottom": "1",
+            "heading": "something",
+            "icon": "theme-check",
+            "link_to_resource": "none",
+            "text_before_link": false,
+            "heading_secondary": ""
+          }
+        },
+        "divider_HGwyhB": {
+          "type": "divider",
+          "settings": {
+            "spacing_bottom": "3"
+          }
+        },
+        "description_qA3HqH": {
+          "type": "description",
+          "disabled": true,
+          "settings": {
+            "spacing_bottom": "2",
+            "behaviour": "plain",
+            "heading": "",
+            "text_truncate": 3,
+            "icon": "theme-release"
+          }
+        },
+        "1e939cd6-0955-4135-a9e5-c50faef01437": {
+          "type": "purchase_options",
+          "settings": {
+            "spacing_bottom": "1",
+            "show_subscription_title": true,
+            "show_subscription_custom_info": "",
+            "show_subscription_policy": true
+          }
+        },
+        "1e939cd6-0958-4135-a9e5-c50faef01437": {
+          "type": "variant_picker",
+          "settings": {
+            "title": "Variant picker",
+            "spacing_bottom": "3",
+            "picker_type": "swatch",
+            "show_variant_images": true,
+            "size_guide_page": "size-guide",
+            "sizes_option": "Size"
+          }
+        },
+        "8604a6ff-ad0b-44dd-8068-1de4e062f8e8": {
+          "type": "buy_buttons",
+          "settings": {
+            "spacing_bottom": "3",
+            "show_quantity": false,
+            "layout": "seperate",
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false
+          }
+        },
+        "e6d841d6-2f71-40b3-956a-912df13f9f6e": {
+          "type": "inventory_notice",
+          "settings": {
+            "spacing_bottom": "1",
+            "inventory_threshold": 15,
+            "notice_just_text": false
+          }
+        },
+        "7be6b89c-da83-4ff2-9b85-44fb28cbfa27": {
+          "type": "pickup-availability",
+          "settings": {
+            "spacing_bottom": "2"
+          }
+        },
+        "divider_XYwkEk": {
+          "type": "divider",
+          "settings": {
+            "spacing_bottom": "1"
+          }
+        },
+        "content_grid_W3Mqy6": {
+          "type": "content_grid",
+          "settings": {
+            "heading": "100-Day Money Back Guarantee!Love it, or it's FREE!",
+            "icon": "theme-check-circle"
+          }
+        },
+        "content_grid_iCJFCN": {
+          "type": "content_grid",
+          "settings": {
+            "heading": "Free U.S. Shipping<br>with Orders over $29!",
+            "icon": "theme-box"
+          }
+        },
+        "divider_MgiKBB": {
+          "type": "divider",
+          "settings": {
+            "spacing_bottom": "1"
+          }
+        },
+        "complementary_products_h7nWQd": {
+          "type": "complementary_products",
+          "settings": {
+            "spacing_bottom": "2",
+            "heading": "You may also like",
+            "icon": "theme-box",
+            "limit": 3
+          }
+        },
+        "content_block_LVFMzA": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Description",
+            "row_content": "<p>blalkasdjflkasjdf;klsa ;laksjdf asdf ;saldkfj sdf;lasdf asdfl;kjsad f;laskdfj as;lkdjfasdfasdf<\/p>",
+            "icon": "",
+            "page": ""
+          }
+        },
+        "content_block_Mf8cTa": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Ingredients",
+            "row_content": "",
+            "icon": "",
+            "page": ""
+          }
+        },
+        "content_block_z9G8Ah": {
+          "type": "content_block",
+          "settings": {
+            "heading": "How to Apply",
+            "row_content": "",
+            "icon": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "goback_zMzywG",
+        "breadcrumbs_JRrp9d",
+        "text_w7iGN6",
+        "badge_dC66pN",
+        "1e0c79e9-7de0-4eee-b9c5-f27132635fb8",
+        "8effeb43-55b7-4ec4-ab9b-68bcd89b865b",
+        "b2dabe12-2158-4ba6-bc54-9baae453acf5",
+        "1ad0121e-439d-45c0-b45d-4f080836ade5",
+        "text_VjFnJy",
+        "divider_HGwyhB",
+        "description_qA3HqH",
+        "1e939cd6-0955-4135-a9e5-c50faef01437",
+        "1e939cd6-0958-4135-a9e5-c50faef01437",
+        "8604a6ff-ad0b-44dd-8068-1de4e062f8e8",
+        "e6d841d6-2f71-40b3-956a-912df13f9f6e",
+        "7be6b89c-da83-4ff2-9b85-44fb28cbfa27",
+        "divider_XYwkEk",
+        "content_grid_W3Mqy6",
+        "content_grid_iCJFCN",
+        "divider_MgiKBB",
+        "complementary_products_h7nWQd",
+        "content_block_LVFMzA",
+        "content_block_Mf8cTa",
+        "content_block_z9G8Ah"
+      ],
+      "settings": {
+        "product_media_layout": "product__media-layout--full",
+        "product_media_layout_mobile": "product__media-layout--full--sm",
+        "product_media_aspect_ratio": "auto",
+        "product_media_object_fit": "contain",
+        "product_slider_auto_height": true,
+        "media_transparent_background": false,
+        "display_media_zoom": "none",
+        "product_media_with_thumbs": "only_desktop",
+        "product_media_thumbs_ratio": "auto",
+        "product_media_thumbs_object_fit": "cover",
+        "gallery_arrows_show_on": "both",
+        "display_media_gallery_pagination": "dots",
+        "media_gallery_info": "",
+        "metafield_as_seen_on": "",
+        "color_scheme_gallery": "scheme-1",
+        "enable_sticky_info": true,
+        "enable_actions_bar": true,
+        "media_grid_position": "start",
+        "spacing_grid": 1.6,
+        "grid_content_alignment": "start",
+        "section_width": "max-w-page",
+        "color_scheme": "",
+        "spacing_top": "0",
+        "spacing_bottom": "2"
+      }
+    },
+    "marquees_zNeiyH": {
+      "type": "marquees",
+      "blocks": {
+        "item_bq9N76": {
+          "type": "item",
+          "settings": {
+            "icon": "theme-plus",
+            "title": "CONFIDENCE",
+            "link": ""
+          }
+        },
+        "item_3NPyqq": {
+          "type": "item",
+          "settings": {
+            "icon": "theme-plus",
+            "title": "COMFORT",
+            "link": ""
+          }
+        },
+        "item_i9eL9M": {
+          "type": "item",
+          "settings": {
+            "icon": "theme-plus",
+            "title": "FREEDOM",
+            "link": ""
+          }
+        },
+        "item_DDabXp": {
+          "type": "item",
+          "settings": {
+            "icon": "theme-plus",
+            "title": "LESS WORRY",
+            "link": ""
+          }
+        },
+        "item_DEgJYL": {
+          "type": "item",
+          "settings": {
+            "icon": "theme-plus",
+            "title": "DRY SHIRTS",
+            "link": ""
+          }
+        },
+        "item_ECrXwT": {
+          "type": "item",
+          "settings": {
+            "icon": "theme-plus",
+            "title": "WEAR COLORS AGAIN",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_bq9N76",
+        "item_3NPyqq",
+        "item_i9eL9M",
+        "item_DDabXp",
+        "item_DEgJYL",
+        "item_ECrXwT"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable_animation": true,
+        "marquee_duration_rate": 7,
+        "marquee_font_size": 1,
+        "marquee_items_spacing": 4.8,
+        "color_scheme": "scheme-5",
+        "spacing_top": "0",
+        "spacing_bottom": "0"
+      }
+    },
+    "multitile_ybjXjD": {
+      "type": "multitile",
+      "blocks": {
+        "tile_eXgtPf": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 2,
+            "row_factor": 1,
+            "tile_aspect_ratio": "3\/2",
+            "color_scheme": "scheme-37f43a1b-4217-4c17-90c4-5e0d2850e161",
+            "gradient_background_color": "linear-gradient(180deg, rgba(0, 187, 182, 1), rgba(0, 187, 182, 1) 100%)",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-center text-center",
+            "content_alignment_for_mobile": "start",
+            "media_position": "background",
+            "heading": "NO MORE EMBARRASSING SWEAT MARKS",
+            "heading_size": "h3",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "button--filled",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        },
+        "tile_aRRcbb": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 2,
+            "row_factor": 1,
+            "tile_aspect_ratio": "3\/2",
+            "color_scheme": "scheme-5",
+            "gradient_background_color": "",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-center text-center",
+            "content_alignment_for_mobile": "start",
+            "media_position": "background",
+            "heading": "",
+            "heading_size": "h3",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "button--filled",
+            "image": "shopify:\/\/shop_images\/16_3dd9cb89-0d2f-483f-b1ce-7e8037548f33.jpg",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        },
+        "tile_XxhhTB": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 2,
+            "row_factor": 1,
+            "tile_aspect_ratio": "3\/2",
+            "color_scheme": "",
+            "gradient_background_color": "linear-gradient(89deg, rgba(232, 255, 122, 1) 7%, rgba(232, 255, 122, 1) 94%)",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-center text-center",
+            "content_alignment_for_mobile": "start",
+            "media_position": "background",
+            "heading": "WEAR COLORS AGAIN!",
+            "heading_size": "h3",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "button--filled",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        }
+      },
+      "block_order": [
+        "tile_eXgtPf",
+        "tile_aRRcbb",
+        "tile_XxhhTB"
+      ],
+      "settings": {
+        "block_order_mobile": false,
+        "color_scheme": "",
+        "section_width": "max-w-page",
+        "spacing_top": "2",
+        "spacing_bottom": "2"
+      }
+    },
+    "testimonials_wNkfef": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_aACxzJ": {
+          "type": "testimonial",
+          "settings": {
+            "author": "Jane Doe",
+            "quote": "<p>“I absolutely love the quality of my Leo Bikini Bottoms.”<\/p>",
+            "rating_score": 5,
+            "color_scheme": ""
+          }
+        },
+        "testimonial_X3MeKr": {
+          "type": "testimonial",
+          "settings": {
+            "author": "Jane Doe",
+            "quote": "<p>“I absolutely love the quality of my Leo Bikini Bottoms.”<\/p>",
+            "rating_score": 5,
+            "color_scheme": "scheme-1"
+          }
+        },
+        "testimonial_tfdWAW": {
+          "type": "testimonial",
+          "settings": {
+            "author": "Jane Doe",
+            "quote": "<p>“I absolutely love the quality of my Leo Bikini Bottoms.”<\/p>",
+            "rating_score": 5,
+            "color_scheme": ""
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_aACxzJ",
+        "testimonial_X3MeKr",
+        "testimonial_tfdWAW"
+      ],
+      "settings": {
+        "heading": "TESTIMONIALS",
+        "heading_size": "h4",
+        "subheading": "",
+        "rating_icon": "none",
+        "layout": "carousel-none-media",
+        "slider_autoplay": 3,
+        "image": "shopify:\/\/shop_images\/13_04d0db87-d9c1-4f3d-801d-8231d14052bf.jpg",
+        "image_position": "image-start",
+        "image_aspect_ratio": "4\/3",
+        "media_show_on": "desktop",
+        "spacing_inner": "2",
+        "section_width": "max-w-page",
+        "color_scheme": "scheme-1",
+        "spacing_top": "2",
+        "spacing_bottom": "2"
+      }
+    },
+    "recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "layout": "layout-1",
+        "enable_slideshow_overflow": false,
+        "heading": "You may also like",
+        "heading_size": "h3",
+        "subheading": "",
+        "button_label": "View all",
+        "button_link": "",
+        "button_style": "button--filled",
+        "show_navigation_arrows": true,
+        "slider_autoplay": 10,
+        "tabs_button_style": "tab-btn-filled",
+        "max_products": 8,
+        "show_unavailable_products": false,
+        "section_width": "max-w-page",
+        "color_scheme": "",
+        "spacing_top": "4",
+        "spacing_bottom": "4"
+      }
+    },
+    "accordions_4Urwj3": {
+      "type": "accordions",
+      "blocks": {
+        "topic_7QkpMe": {
+          "type": "topic",
+          "settings": {
+            "is_open": true,
+            "title": "Shipping details",
+            "text": "<p>Add additional information about shipping policy.<\/p>",
+            "page": ""
+          }
+        },
+        "topic_QAF6Fe": {
+          "type": "topic",
+          "settings": {
+            "is_open": false,
+            "title": "Delivery details",
+            "text": "<p>Add additional information about delivery policy.<\/p>",
+            "page": ""
+          }
+        },
+        "topic_NzPT9D": {
+          "type": "topic",
+          "settings": {
+            "is_open": false,
+            "title": "Refund details",
+            "text": "<p>Add additional information about refund policy.<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "topic_7QkpMe",
+        "topic_QAF6Fe",
+        "topic_NzPT9D"
+      ],
+      "settings": {
+        "heading": "Frequently asked questions",
+        "heading_size": "h3",
+        "section_width": "max-w-narrower",
+        "color_scheme": "",
+        "spacing_top": "2",
+        "spacing_bottom": "4"
+      }
+    },
+    "social_media_highlights_AA3jib": {
+      "type": "social-media-highlights",
+      "blocks": {
+        "image_HKpERc": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/118.jpg",
+            "image_url": ""
+          }
+        },
+        "image_WBeENX": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/SB_Email_Creative_11_3.jpg",
+            "image_url": ""
+          }
+        },
+        "image_ALLaDN": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/126.jpg",
+            "image_url": ""
+          }
+        },
+        "image_zEgACW": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/123.jpg",
+            "image_url": ""
+          }
+        },
+        "image_U3rTQr": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/124.jpg",
+            "image_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_HKpERc",
+        "image_WBeENX",
+        "image_ALLaDN",
+        "image_zEgACW",
+        "image_U3rTQr"
+      ],
+      "settings": {
+        "layout": "default",
+        "heading": "A GAME CHANGER",
+        "heading_size": "h3",
+        "subheading": "Less Sweat. More Comfort and Confidence.",
+        "button_label": "",
+        "button_link": "#",
+        "button_style": "button--filled",
+        "button_icon": "",
+        "content_card_color_scheme": "scheme-3",
+        "media_aspect_ratio": "auto",
+        "autoplay_speed": 7,
+        "section_width": "max-w-full",
+        "color_scheme": "",
+        "spacing_top": "2",
+        "spacing_bottom": "2"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "marquees_zNeiyH",
+    "multitile_ybjXjD",
+    "testimonials_wNkfef",
+    "recommendations",
+    "accordions_4Urwj3",
+    "social_media_highlights_AA3jib"
+  ]
+}

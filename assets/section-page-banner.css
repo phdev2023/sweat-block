@@ -1,0 +1,119 @@
+.section-page-banner {
+  position: relative;
+}
+
+.section-page-banner>div {
+  width: 100%;
+  min-height: var(--section-height);
+
+  display: flex;
+  flex-direction: column;
+  align-items: var(--section-content-alignment, center);
+  justify-content: var(--section-content-position, center);
+
+}
+
+.section-page-banner:has(.media-position--background)>div {
+  height: var(--section-height);
+}
+
+.section-page-banner .container {
+  display: flex;
+  flex-direction: column;
+  align-items: var(--section-content-alignment, center);
+  text-align: var(--section-content-alignment, center);
+  gap: calc(var(--section-spacing-unit-size) * 1.5);
+  background-color: rgb(var(--color-background));
+}
+.section-page-banner .container .rte ul,
+.section-page-banner .container .rte ol {
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  align-items: var(--section-content-alignment);
+}
+
+.section-page-banner__content {
+  display: inherit;
+  flex-direction: inherit;
+  align-items: inherit;
+  max-width: 100%;
+}
+
+.media-position--top .media,
+.media-position--bottom .media {
+  display: flex;
+  justify-content: center;
+  align-self: var(--section-content-alignment, center);
+  background-color: transparent;
+}
+
+.media-position--top .media {
+  order: -1;
+}
+
+.media-position--bottom .media {
+  order: 1;
+}
+
+.media-position--top img,
+.media-position--bottom img {
+  width: auto;
+  /* height: var(--section-height, 50vh); */
+}
+
+.media-position--background .section-page-banner__content {
+  position: relative;
+  z-index: 1;
+}
+
+.section-page-banner .section__heading {
+  color: rgba(var(--color-heading-text), 1);
+}
+
+.breadcrumbs+.section__heading {
+  margin-block-start: calc(var(--section-spacing-unit-size) * 1);
+}
+
+.section-page-banner__text {
+  color: rgb(var(--color-foreground));
+  margin-block-start: calc(var(--spacing-unit-size) * 1.5);
+  align-items: inherit;
+}
+
+.section-page-banner__text p:last-child {
+  margin-block-end: 0;
+}
+
+.section-page-banner__text p:first-child {
+  margin-block-start: 0;
+}
+
+.section-page-banner__menu {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.section-page-banner__menu .menu.menu--horizontal {
+  display: flex;
+  justify-content: start;
+  gap: calc(var(--spacing-unit-size) * 0.5);
+  margin-block-start: calc(var(--spacing-unit-size) * 3);
+  overflow: scroll;
+}
+
+.section-page-banner__menu .menu.menu--horizontal .menu__item a {
+  white-space: nowrap;
+}
+
+
+.section-page-banner .media--overlay-blur::before {
+  content: '';
+  position: absolute;
+  inset-block-end: 0;
+  inset-inline-start: 0;
+  width: 100%;
+  height: 25%;
+  backdrop-filter: blur(1.2rem);
+  mask: linear-gradient(transparent, #000 50%);
+}
