@@ -159,6 +159,8 @@
             disabled
           {% endif %}
         >
+          <span id="button-price-{{- section.id -}}">{{ product.selected_or_first_available_variant.price | money  }}</span>
+           - 
           <span>
             {%- if product.selected_or_first_available_variant == nil -%}
               {{ 'product.unavailable' | t }}
@@ -167,8 +169,7 @@
             {%- else -%}
               {{ 'theme.actions.add_to_cart' | t }}
             {%- endif -%}
-          </span> - 
-          <span id="button-price-{{- section.id -}}">{{ product.selected_or_first_available_variant.price | money  }}</span>
+          </span>
           <div class="loading__spinner hidden">
             {%- render 'loading-spinner' -%}
           </div>
