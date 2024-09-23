@@ -29,3 +29,9 @@
 .template--product .product__content-grid{
     margin-block-end: 20px !important;
 }
+.skio-save {
+  
+    border-radius: 0 !important;
+    color: #151515 !important;
+    background: #e8ff7a !important;
+}
