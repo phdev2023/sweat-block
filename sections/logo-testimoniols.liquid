@@ -1,0 +1,228 @@
+<!-- Add in the <head> for Swiper's CSS -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<style>
+  .swiper-container {
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    position: relative;
+  }
+  .swiper-slide {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Prevents extra spacing between slides if you’re using centeredSlides */
+  .swiper-wrapper {
+    display: flex;
+  }
+  .logo-slide {
+    opacity: 0.5; /* Set default opacity for inactive logos */
+    cursor: pointer; /* Indicate clickable logos */
+  }
+
+  .logo-slide.swiper-slide-active {
+    opacity: 1; /* Highlight the active slide */
+    transform: scale(1.1); /* Optionally scale the active logo */
+    transition: transform 0.3s ease;
+  }
+
+  .swiper-container {
+    width: 100%; /* Ensure full width */
+    overflow: hidden;
+  }
+
+  .swiper-wrapper {
+    display: flex; /* Ensure slides are in a row */
+  }
+
+  .swiper-slide {
+    flex-shrink: 0; /* Prevent shrinking */
+    width: auto; /* Each slide should take the required width */
+    text-align: center;
+
+    font-weight: 400;
+  }
+
+  .first-slider .swiper-wrapper {
+    justify-content: center;
+  }
+  .first-slider .swiper-slide:not(.swiper-slide-active) img {
+    opacity: 0.32;
+  }
+  .second-slider .swiper-slide p {
+    max-width: 420px;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: flex !important;
+    top:35px;
+    height:24px !important;
+  }
+  .swiper-button-next:after,
+  .swiper-button-next:after, .swiper-button-prev:after  {
+    font-size: 24px;
+   
+    color: rgba(var(--color-foreground), 1);
+
+  }
+  @media screen and (min-width: 768px) {
+    .swiper-slide {
+      font-size: 25px;
+      line-height: 35px;
+    }
+    .first-slider .swiper-slide {
+      max-width: 84px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .first-slider .swiper-slide:not(.swiper-slide-active) {
+      display: none;
+    }
+    .first-slider .swiper-slide {
+      max-width: 111px;
+    }
+    .swiper-container.second-slider {
+      padding: 0px 40px;
+    }
+  }
+</style>
+<div class="container max-w-page">
+  <div class="swiper-container first-slider">
+    <div class="swiper-wrapper">
+      {% for block in section.blocks %}
+        <div class="swiper-slide">
+          <img src="{{ block.settings.logo | img_url:'166x' }}" alt="Logo {{ forloop.index }}">
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="swiper-container second-slider">
+    <div class="swiper-wrapper">
+      {% for block in section.blocks %}
+        <div class="swiper-slide">
+          <p>{{ block.settings.text }}</p>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // First slider (Logos)
+    const firstSlider = new Swiper('.first-slider', {
+      allowTouchMove: false,
+      centeredSlides: false,
+      spaceBetween: 10,
+      loop: true,
+      breakpoints: {
+        // When the window width is <= 767px (mobile screens)
+        767: {
+          slidesPerView: 1,
+          centeredSlides: true,
+        },
+        // For larger screens (e.g., tablets and desktops)
+        768: {
+          slidesPerView: 3, // Show 3 slides on larger screens
+        },
+      },
+    });
+
+    // Second slider (Content)
+    const secondSlider = new Swiper('.second-slider', {
+      slidesPerView: 1,
+      effect: 'fade',
+      loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      autoplay: {
+        delay: 5000,
+      },
+
+      fadeEffect: {
+        crossFade: true, // Ensures proper fade between slides
+      },
+      breakpoints: {
+        // When the window width is <= 767px (mobile screens)
+        767: {
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        },
+      },
+    });
+
+    // Handle click on logos in first slider
+    const logoSlides = document.querySelectorAll('.first-slider .swiper-slide');
+
+    // Update active class in Slider 1
+    const updateActiveClass = (index) => {
+      logoSlides.forEach((slide, i) => {
+        if (i === index) {
+          slide.classList.add('swiper-slide-active');
+        } else {
+          slide.classList.remove('swiper-slide-active');
+        }
+      });
+    };
+
+    // Set event listeners for each logo slide
+    logoSlides.forEach((logo, index) => {
+      logo.addEventListener('click', () => {
+        updateActiveClass(index);
+        secondSlider.slideToLoop(index); // Correct function for looping slider
+        secondSlider.autoplay.start(); // Restart autoplay after interaction
+      });
+    });
+
+    // Sync active slide when second slider is navigated manually
+    secondSlider.on('slideChange', () => {
+      const activeIndex = secondSlider.realIndex; // Use realIndex for looped slider
+      updateActiveClass(activeIndex);
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Connected Slider",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "logo",
+          "label": "Logo"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text Content"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Connected Slider"
+    }
+  ]
+}
+{% endschema %}
