@@ -267,6 +267,47 @@
         "spacing_bottom": "0"
       }
     },
+    "spacing_48ceDg": {
+      "type": "spacing",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "spacing_top": "2",
+        "spacing_bottom": "2"
+      }
+    },
+    "logo_testimoniols_hDN4MU": {
+      "type": "logo-testimoniols",
+      "blocks": {
+        "slide_qMr8pK": {
+          "type": "slide",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/Refinery29_166x_815bb731-551d-45e4-a0aa-221b5b02c01d.png",
+            "text": "“Mighty Patch is hailed a blemish hero with good reason.”"
+          }
+        },
+        "slide_7DQi4j": {
+          "type": "slide",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/Beauty-Insider_166x_b432fdb9-b005-448c-928b-9e0fe4ab94e9.png",
+            "text": "\"The cult-favorite Mighty Patch from Hero Cosmetics has me completely sold.\""
+          }
+        },
+        "slide_3k3ngE": {
+          "type": "slide",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/hypebae_166x_ff98429a-26d9-4f10-b6fd-c61adbf2a435.png",
+            "text": "“Blew other patches out of the water in terms of ease of use and quality.”"
+          }
+        }
+      },
+      "block_order": [
+        "slide_qMr8pK",
+        "slide_7DQi4j",
+        "slide_3k3ngE"
+      ],
+      "settings": {
+      }
+    },
     "dual_tiles_nqzRrp": {
       "type": "dual-tiles",
       "blocks": {
@@ -580,6 +621,77 @@
         "spacing_bottom": "2"
       }
     },
+    "seo_content_BHH6dm": {
+      "type": "seo-content",
+      "settings": {
+        "section_layout": "normal",
+        "heading": "As Seen In",
+        "heading_size": "h3",
+        "text": "",
+        "content_alignment": "center",
+        "section_width": "max-w-narrower",
+        "color_scheme": "",
+        "spacing_inner": "1",
+        "spacing_top": "4",
+        "spacing_bottom": "0"
+      }
+    },
+    "marquees_z4HgVr": {
+      "type": "marquees",
+      "blocks": {
+        "item_JzTixn": {
+          "type": "item",
+          "settings": {
+            "icon": "",
+            "custom_icon": "shopify:\/\/shop_images\/10_f7041445-607d-4436-aa72-29faa8cfc366.png",
+            "title": "",
+            "link": ""
+          }
+        },
+        "item_TmVPU6": {
+          "type": "item",
+          "settings": {
+            "icon": "theme-box",
+            "custom_icon": "shopify:\/\/shop_images\/6_6cf61b90-4639-47a8-a92d-fdf71336453a.png",
+            "title": "",
+            "link": ""
+          }
+        },
+        "item_NU7PFn": {
+          "type": "item",
+          "settings": {
+            "icon": "theme-box",
+            "custom_icon": "shopify:\/\/shop_images\/1_618e678b-002c-462d-bd80-260f4e82a341.png",
+            "title": "",
+            "link": ""
+          }
+        },
+        "item_zKpTNF": {
+          "type": "item",
+          "settings": {
+            "icon": "theme-box",
+            "custom_icon": "shopify:\/\/shop_images\/4_5c9f842f-37b8-4dc4-98f2-01f2e76c0bcc.png",
+            "title": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_JzTixn",
+        "item_TmVPU6",
+        "item_NU7PFn",
+        "item_zKpTNF"
+      ],
+      "settings": {
+        "enable_animation": true,
+        "marquee_duration_rate": 5,
+        "marquee_font_size": 6,
+        "marquee_items_spacing": 4.8,
+        "color_scheme": "",
+        "spacing_top": "0",
+        "spacing_bottom": "0"
+      }
+    },
     "blog_articles_ThCgzt": {
       "type": "blog-articles",
       "settings": {
@@ -752,39 +864,6 @@
         "spacing_top": "0",
         "spacing_bottom": "0"
       }
-    },
-    "logo_testimoniols_hDN4MU": {
-      "type": "logo-testimoniols",
-      "blocks": {
-        "slide_qMr8pK": {
-          "type": "slide",
-          "settings": {
-            "logo": "shopify:\/\/shop_images\/Refinery29_166x_815bb731-551d-45e4-a0aa-221b5b02c01d.png",
-            "text": "“Mighty Patch is hailed a blemish hero with good reason.”"
-          }
-        },
-        "slide_7DQi4j": {
-          "type": "slide",
-          "settings": {
-            "logo": "shopify:\/\/shop_images\/Beauty-Insider_166x_b432fdb9-b005-448c-928b-9e0fe4ab94e9.png",
-            "text": "\"The cult-favorite Mighty Patch from Hero Cosmetics has me completely sold.\""
-          }
-        },
-        "slide_3k3ngE": {
-          "type": "slide",
-          "settings": {
-            "logo": "shopify:\/\/shop_images\/hypebae_166x_ff98429a-26d9-4f10-b6fd-c61adbf2a435.png",
-            "text": "“Blew other patches out of the water in terms of ease of use and quality.”"
-          }
-        }
-      },
-      "block_order": [
-        "slide_qMr8pK",
-        "slide_7DQi4j",
-        "slide_3k3ngE"
-      ],
-      "settings": {
-      }
     }
   },
   "order": [
@@ -792,14 +871,17 @@
     "featured_products_pxPrEd",
     "callout_banner_rVDLqh",
     "full_width_banner_JMAceU",
+    "spacing_48ceDg",
+    "logo_testimoniols_hDN4MU",
     "dual_tiles_nqzRrp",
     "dual_tiles_m3b67h",
     "dual_tiles_zNy4gJ",
     "testimonials_CMyt3F",
+    "seo_content_BHH6dm",
+    "marquees_z4HgVr",
     "blog_articles_ThCgzt",
     "social_media_highlights_fVaa73",
     "compare_slider_FCDTTc",
-    "marquees_TFD63r",
-    "logo_testimoniols_hDN4MU"
+    "marquees_TFD63r"
   ]
 }
