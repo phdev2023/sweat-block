@@ -81,6 +81,9 @@
     .first-slider .swiper-slide {
       max-width: 84px;
     }
+    .swiper-button-next, .swiper-button-prev {
+      display: none !important;
+    }
   }
 
   @media screen and (max-width: 767px) {
@@ -93,6 +96,7 @@
     .swiper-container.second-slider {
       padding: 0px 40px;
     }
+  
   }
 </style>
 <div class="container max-w-page">
@@ -144,10 +148,7 @@
       slidesPerView: 1,
       effect: 'fade',
       loop: true,
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
+     
       autoplay: {
         delay: 5000,
       },
