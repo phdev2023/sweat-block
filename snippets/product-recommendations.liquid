@@ -26,7 +26,7 @@
     <div class="product-recommendations__items swiper-wrapper" data-recommendations>
       {%- if recommendations.performed and recommendations.products_count > 0 -%}
         {%- for recommendation in recommendations.products limit: product_recommendations_limit -%}
-
+          {% unless product.tags contains 'hide' %}
           <a href="{{- recommendation.url -}}" class="product-recommendations__item swiper-slide">
 
             {%- if recommendation.featured_image -%}
@@ -72,6 +72,7 @@
             </div>
 
           </a>
+          {% endunless %}
         {%- endfor -%}
       {%- endif -%}
     </div>

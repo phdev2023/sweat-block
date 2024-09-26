@@ -20,9 +20,13 @@
     <li class="breadcrumbs__separator">/</li>
 
     {%- if product and collection -%}
+      {%- assign collection_title = collection.title  -%}
+      {% if collection.metafields['custom']['collection_short_title'] != blank %}
+        {% assign collection_title = collection.metafields['custom']['collection_short_title'] %}
+      {% endif %}
       <li>
         <a href="{{- collection.url -}}" class="breadcrumbs__link">
-          {{- collection.title | escape -}}
+          {{- collection_title | escape -}}
         </a>
       </li>
 
@@ -30,9 +34,13 @@
     {%- endif -%}
 
     {%- if product_collection -%}
+      {%- assign collection_title = product_collection.title  -%}
+      {% if product_collection.metafields['custom']['collection_short_title'] != blank %}
+        {% assign collection_title = product_collection.metafields['custom']['collection_short_title'] %}
+      {% endif %}
       <li>
         <a href="{{- product_collection.url -}}" class="breadcrumbs__link">
-          {{- product_collection.title | escape -}}
+          {{- collection_title | escape -}}
         </a>
       </li>
 
@@ -50,7 +58,22 @@
     <li>
       <span>
         {%- if template.name != 'search' -%}
-          {{- page_title | escape -}}
+          {% assign base_title = page_title %}
+          {% if template contains 'product' %}
+           
+            {% if product.metafields['custom']['product_short_title'] != blank %}
+              {% assign base_title = product.metafields['custom']['product_short_title'] %}
+            {% endif %}
+            {{- base_title | escape -}}
+          {% elsif template contains 'collection' %}
+            {% if collection.metafields['custom']['collection_short_title'] != blank %}
+              {% assign base_title = collection.metafields['custom']['collection_short_title'] %}
+            {% endif %}  
+            {{- base_title | escape -}}
+          {% else %}
+              {{- page_title | escape -}}
+          {% endif %}
+          
         {%- else -%}
           {{- 'theme.breadcrumb.search' | t -}}
         {%- endif -%}

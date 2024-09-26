@@ -50,6 +50,9 @@
 .jdgm-preview-badge--with-link .jdgm-prev-badge__text{
     text-decoration: underline;
 }
+.product__complementaries{
+    overflow: hidden;
+}
 @media  screen and (min-width: 750px) {
     .template--product .product__title {
         font-size: calc(var(--font-size-static-large) * 1.5);

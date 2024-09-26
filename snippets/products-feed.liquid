@@ -113,9 +113,11 @@
                 {%- endunless -%}
 
                 {%- for product in products_array limit: products_limit -%}
-                  <div class="swiper-slide card-product-slider__slide">
-                    {% render 'card-product', product_ref: product, section_id: section.id, image_per_view: 4  %}
-                  </div>
+                  {% unless product.tags contains 'shop_exclude' %}
+                    <div class="swiper-slide card-product-slider__slide ">
+                      {% render 'card-product', product_ref: product, section_id: section.id, image_per_view: 4  %}
+                    </div>
+                  {% endunless %}
                 {%- endfor -%}
               {%- endif -%}
             </div>
