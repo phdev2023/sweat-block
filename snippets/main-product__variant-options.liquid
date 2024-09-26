@@ -113,23 +113,50 @@
       variant_img: variant_img
     %}
   {%- elsif picker_type == 'button' -%}
-    <input
-      type="radio"
-      id="{{ input_id }}"
-      name="{{ input_name }}"
-      value="{{ value | escape }}"
-      form="{{ product_form_id }}"
-      {% if value.selected %}
-        checked
+    {% liquid
+      for variant in product.variants
+      for option in variant.options
+        if option == value
+          assign per_piece = variant.metafields.custom.per_piece
+          assign save = variant.metafields.custom.save
+        endif
+
+      
+      endfor
+    endfor
+    
+    %}
+
+
+    
+    <label for="{{ input_id }}" class="{{ settings.product_swatch_style }}  {% if value.selected %}
+          checked
+        {% endif %}">
+      <input
+        type="radio"
+        id="{{ input_id }}"
+        name="{{ input_name }}"
+        value="{{ value | escape }}"
+        form="{{ product_form_id }}"
+        {% if value.selected %}
+          checked
+        {% endif %}
+        {% if option_disabled %}
+          class="disabled"
+        {% endif %}
+        {{ input_dataset }}
+      >
+        <div class="label_content">
+      {% if save != blank %}
+        <span class="label-save">{{ save }}</span>
       {% endif %}
-      {% if option_disabled %}
-        class="disabled"
+      <span class="option-value">{{ value -}}</span>
+      {% if per_piece != blank %}
+        <span class="per-piece">{{ per_piece }}</span>
       {% endif %}
-      {{ input_dataset }}
-    >
-    <label for="{{ input_id }}" class="{{ settings.product_swatch_style }}">
-      <span>{{ value -}}</span>
+    
       {{ label_unavailable }}
+      </div>
     </label>
   {%- elsif picker_type == 'dropdown' or picker_type == 'swatch_dropdown' -%}
     <option

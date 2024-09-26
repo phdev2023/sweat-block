@@ -53,6 +53,52 @@
 .product__complementaries{
     overflow: hidden;
 }
+.product-form__input .swatch--square{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 10px 20px;
+    flex:1;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid #eee;
+}
+.product-form__input--pill input[type=radio]+label.swatch--square{
+    height: auto;
+}
+.label_content{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+span.label-save {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translate(-50%);
+    width: max-content;
+    background-color: var(--color-badge-discount-background);
+    color: var(--color-badge-discount-foreground);
+    padding: 5px 10px;
+    white-space: nowrap;
+    font-size: 10px;
+}
+.per-piece{
+    font-size: 10px;
+}
+.option-value{
+    font-weight: bold;
+}
+.product__content .product__variant-picker{
+    width: 100%;
+}
+variant-selects fieldset{
+    gap:20px;
+}
+.swatch--square.checked{
+    background: #323e4821;
+}
+        
 @media  screen and (min-width: 750px) {
     .template--product .product__title {
         font-size: calc(var(--font-size-static-large) * 1.5);
