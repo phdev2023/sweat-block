@@ -7,15 +7,6 @@
 * made to this file may be overwritten.
 * ------------------------------------------------------------
 */
-/*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
 {
   "sections": {
     "1658995208ad05f95f": {
@@ -27,19 +18,19 @@
             "banner_layout": "hero-banner--full",
             "color_scheme": "scheme-6",
             "header_menu_text_color": "#ffffff",
-            "heading": "<p>Full Width <em>Hero</em> Banner</p>",
+            "heading": "<p>Full Width <em>Hero<\/em> Banner<\/p>",
             "subheading": "Highlight Your Promotion",
             "subheading_link": "",
-            "text": "<p>Give customers details about the banner image or content on the template.</p>",
+            "text": "<p>Give customers details about the banner image or content on the template.<\/p>",
             "button_label_1": "Shop Now",
-            "button_link_1": "shopify://collections",
+            "button_link_1": "shopify:\/\/collections",
             "button_style_1": "button--filled",
             "button_label_2": "Explore",
             "button_link_2": "",
             "button_style_2": "button--outlined",
             "content_position": "end",
             "content_alignment": "center",
-            "image": "shopify://shop_images/6_b947ed8e-1cd8-4bf1-8fdb-8a2ab55ae946.jpg",
+            "image": "shopify:\/\/shop_images\/6_b947ed8e-1cd8-4bf1-8fdb-8a2ab55ae946.jpg",
             "video_external": "",
             "show_controls_on_video": false,
             "enable_media_overlay_desktop": false,
@@ -56,15 +47,15 @@
             "banner_layout": "hero-banner--70-30",
             "color_scheme": "scheme-5",
             "header_menu_text_color": "#ffffff",
-            "heading": "<p>70-30 Hero <em>Banner</em></p>",
+            "heading": "<p>70-30 Hero <em>Banner<\/em><\/p>",
             "subheading": "Highlight Your Promotion",
             "subheading_link": "",
-            "text": "<p>Give customers details about the banner image or content on the template.</p>",
+            "text": "<p>Give customers details about the banner image or content on the template.<\/p>",
             "button_label_1": "Shop Now",
-            "button_link_1": "shopify://collections",
+            "button_link_1": "shopify:\/\/collections",
             "button_style_1": "button--filled",
             "button_label_2": "Explore",
-            "button_link_2": "shopify://collections/all",
+            "button_link_2": "shopify:\/\/collections\/all",
             "button_style_2": "button--outlined",
             "content_position": "end",
             "content_alignment": "center",
@@ -84,15 +75,15 @@
             "banner_layout": "hero-banner--30-70",
             "color_scheme": "scheme-5",
             "header_menu_text_color": "#ffffff",
-            "heading": "<p>30-70 Hero <em>Banner</em></p>",
+            "heading": "<p>30-70 Hero <em>Banner<\/em><\/p>",
             "subheading": "Highlight Your Promotion",
             "subheading_link": "",
-            "text": "<p>Give customers details about the banner image or content on the template.</p>",
+            "text": "<p>Give customers details about the banner image or content on the template.<\/p>",
             "button_label_1": "Shop Now",
-            "button_link_1": "shopify://collections",
+            "button_link_1": "shopify:\/\/collections",
             "button_style_1": "button--filled",
             "button_label_2": "Explore",
-            "button_link_2": "shopify://collections/all",
+            "button_link_2": "shopify:\/\/collections\/all",
             "button_style_2": "button--outlined",
             "content_position": "end",
             "content_alignment": "center",
@@ -112,15 +103,15 @@
             "banner_layout": "hero-banner--split",
             "color_scheme": "scheme-5",
             "header_menu_text_color": "#ffffff",
-            "heading": "<p>Split Hero Banner</p>",
+            "heading": "<p>Split Hero Banner<\/p>",
             "subheading": "Highlight Your Promotion",
             "subheading_link": "",
-            "text": "<p>Give customers details about the banner image or content on the template.</p>",
+            "text": "<p>Give customers details about the banner image or content on the template.<\/p>",
             "button_label_1": "Shop Now",
-            "button_link_1": "shopify://collections",
+            "button_link_1": "shopify:\/\/collections",
             "button_style_1": "button--filled",
             "button_label_2": "Explore",
-            "button_link_2": "shopify://collections/all",
+            "button_link_2": "shopify:\/\/collections\/all",
             "button_style_2": "button--outlined",
             "content_position": "end",
             "content_alignment": "center",
@@ -200,7 +191,7 @@
         "subheading": "Callout tagline",
         "heading": "Callout heading",
         "heading_size": "h2",
-        "text": "<p>Add descriptive text for your calldown here.</p>",
+        "text": "<p>Add descriptive text for your calldown here.<\/p>",
         "action_preference": "newsletter_form",
         "button_label": "Shop Sale",
         "button_link": "",
@@ -240,7 +231,7 @@
           "type": "heading",
           "settings": {
             "block_width": "max-w-narrow",
-            "heading": "Tell your <em>brand's story</em> through images",
+            "heading": "Tell your <em>brand's story<\/em> through images",
             "heading_size": "h2"
           }
         },
@@ -248,11 +239,11 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Shop new in",
-            "button_link_1": "shopify://collections",
+            "button_link_1": "shopify:\/\/collections",
             "button_style_1": "button--filled",
             "color_scheme_first_button": "scheme-6",
             "button_label_2": "Shop all",
-            "button_link_2": "shopify://collections/all",
+            "button_link_2": "shopify:\/\/collections\/all",
             "button_style_2": "button--outlined",
             "color_scheme_second_button": "scheme-6"
           }
@@ -299,21 +290,21 @@
         "slide_qMr8pK": {
           "type": "slide",
           "settings": {
-            "logo": "shopify://shop_images/Refinery29_166x_815bb731-551d-45e4-a0aa-221b5b02c01d.png",
+            "logo": "shopify:\/\/shop_images\/Refinery29_166x_815bb731-551d-45e4-a0aa-221b5b02c01d.png",
             "text": "“Lorem ipsum dolor sit amet, consectetur adipiscing elit. ”"
           }
         },
         "slide_7DQi4j": {
           "type": "slide",
           "settings": {
-            "logo": "shopify://shop_images/Beauty-Insider_166x_b432fdb9-b005-448c-928b-9e0fe4ab94e9.png",
+            "logo": "shopify:\/\/shop_images\/Beauty-Insider_166x_b432fdb9-b005-448c-928b-9e0fe4ab94e9.png",
             "text": "\"Sed in ex in quam vulputate semper. \""
           }
         },
         "slide_3k3ngE": {
           "type": "slide",
           "settings": {
-            "logo": "shopify://shop_images/hypebae_166x_ff98429a-26d9-4f10-b6fd-c61adbf2a435.png",
+            "logo": "shopify:\/\/shop_images\/hypebae_166x_ff98429a-26d9-4f10-b6fd-c61adbf2a435.png",
             "text": "“Ut in purus nunc. Etiam consequat commodo feugiat”"
           }
         }
@@ -344,7 +335,7 @@
             "product": "",
             "product_width": 24,
             "show_other_elements_with_product": true,
-            "aspect_ratio": "2/1",
+            "aspect_ratio": "2\/1",
             "vertical_position": "stretch",
             "content_position": "justify-center",
             "content_alignment": "text-center align-center",
@@ -424,7 +415,7 @@
             "product": "",
             "product_width": 24,
             "show_other_elements_with_product": true,
-            "aspect_ratio": "1/1",
+            "aspect_ratio": "1\/1",
             "vertical_position": "stretch",
             "content_position": "justify-center",
             "content_alignment": "text-center align-center",
@@ -573,7 +564,7 @@
           "type": "testimonial",
           "settings": {
             "author": "Alex Thompson",
-            "quote": "<p>After trying countless products, I finally found the perfect match with this brand; my skin has never looked better, and the ordering process was a breeze!</p>",
+            "quote": "<p>After trying countless products, I finally found the perfect match with this brand; my skin has never looked better, and the ordering process was a breeze!<\/p>",
             "rating_score": 5,
             "color_scheme": "scheme-1"
           }
@@ -582,7 +573,7 @@
           "type": "testimonial",
           "settings": {
             "author": "Michael Richards",
-            "quote": "<p>The results are astounding—my skin feels rejuvenated, and the fast shipping and eco-friendly packaging were the cherries on top!</p>",
+            "quote": "<p>The results are astounding—my skin feels rejuvenated, and the fast shipping and eco-friendly packaging were the cherries on top!<\/p>",
             "rating_score": 4,
             "color_scheme": "scheme-1"
           }
@@ -591,7 +582,7 @@
           "type": "testimonial",
           "settings": {
             "author": "David Lee",
-            "quote": "<p>Exceptional quality and affordable prices; this skincare line has made a noticeable difference in my complexion, and I love the natural ingredients they use!</p>",
+            "quote": "<p>Exceptional quality and affordable prices; this skincare line has made a noticeable difference in my complexion, and I love the natural ingredients they use!<\/p>",
             "rating_score": 5,
             "color_scheme": "scheme-1"
           }
@@ -600,7 +591,7 @@
           "type": "testimonial",
           "settings": {
             "author": "Jonathan Carter",
-            "quote": "<p>Five stars all the way! The customer service was outstanding, and my sensitive skin is now smooth and clear thanks to their gentle formulas.</p>",
+            "quote": "<p>Five stars all the way! The customer service was outstanding, and my sensitive skin is now smooth and clear thanks to their gentle formulas.<\/p>",
             "rating_score": 5,
             "color_scheme": "scheme-1"
           }
@@ -609,7 +600,7 @@
           "type": "testimonial",
           "settings": {
             "author": "Chris Wu",
-            "quote": "<p>I'm genuinely impressed with the effectiveness of these products; they've transformed my skincare routine, and I've received so many compliments on my improved skin!</p>",
+            "quote": "<p>I'm genuinely impressed with the effectiveness of these products; they've transformed my skincare routine, and I've received so many compliments on my improved skin!<\/p>",
             "rating_score": 5,
             "color_scheme": "scheme-1"
           }
@@ -630,7 +621,7 @@
         "layout": "horizontal-w-media",
         "slider_autoplay": 3,
         "image_position": "image-start",
-        "image_aspect_ratio": "1 / 1",
+        "image_aspect_ratio": "1 \/ 1",
         "media_show_on": "desktop",
         "spacing_inner": "2",
         "section_width": "max-w-fluid",
@@ -661,7 +652,7 @@
           "type": "item",
           "settings": {
             "icon": "",
-            "custom_icon": "shopify://shop_images/10_f7041445-607d-4436-aa72-29faa8cfc366.png",
+            "custom_icon": "shopify:\/\/shop_images\/10_f7041445-607d-4436-aa72-29faa8cfc366.png",
             "title": "",
             "link": ""
           }
@@ -670,7 +661,7 @@
           "type": "item",
           "settings": {
             "icon": "theme-box",
-            "custom_icon": "shopify://shop_images/6_6cf61b90-4639-47a8-a92d-fdf71336453a.png",
+            "custom_icon": "shopify:\/\/shop_images\/6_6cf61b90-4639-47a8-a92d-fdf71336453a.png",
             "title": "",
             "link": ""
           }
@@ -679,7 +670,7 @@
           "type": "item",
           "settings": {
             "icon": "theme-box",
-            "custom_icon": "shopify://shop_images/1_618e678b-002c-462d-bd80-260f4e82a341.png",
+            "custom_icon": "shopify:\/\/shop_images\/1_618e678b-002c-462d-bd80-260f4e82a341.png",
             "title": "",
             "link": ""
           }
@@ -688,7 +679,7 @@
           "type": "item",
           "settings": {
             "icon": "theme-box",
-            "custom_icon": "shopify://shop_images/4_5c9f842f-37b8-4dc4-98f2-01f2e76c0bcc.png",
+            "custom_icon": "shopify:\/\/shop_images\/4_5c9f842f-37b8-4dc4-98f2-01f2e76c0bcc.png",
             "title": "",
             "link": ""
           }
@@ -718,7 +709,7 @@
         "blog": "",
         "button_text": "Visit Blog",
         "layout": "layout-1",
-        "card_media_aspect_ratio": "4/3",
+        "card_media_aspect_ratio": "4\/3",
         "show_excerpt": false,
         "show_date": true,
         "show_author": true,
@@ -768,7 +759,7 @@
       ],
       "settings": {
         "layout": "default",
-        "heading": "Join the <em>family</em>",
+        "heading": "Join the <em>family<\/em>",
         "heading_size": "h3",
         "subheading": "",
         "button_label": "Follow us",
@@ -808,13 +799,13 @@
       ],
       "settings": {
         "section_layout": "shrink",
-        "heading": "Before / <em>After</em>",
+        "heading": "Before \/ <em>After<\/em>",
         "heading_size": "h3",
-        "text": "<p>Before and after images are a great way to showcase the transformation or improvement in a particular subject.</p>",
+        "text": "<p>Before and after images are a great way to showcase the transformation or improvement in a particular subject.<\/p>",
         "button_label": "Shop now",
-        "button_link": "/",
+        "button_link": "\/",
         "button_style": "button--filled",
-        "media_aspect_ratio": "3/2",
+        "media_aspect_ratio": "3\/2",
         "section_width": "max-w-page",
         "color_scheme": "scheme-1",
         "spacing_top": "2",
@@ -883,20 +874,85 @@
         "spacing_bottom": "0"
       }
     },
-    "17273623684b6adf9e": {
-      "type": "apps",
+    "custom_testimonials_zUxKPb": {
+      "type": "custom-testimonials",
       "blocks": {
-        "judge_me_reviews_featured_carousel_iT9VXX": {
-          "type": "shopify://apps/judge-me-reviews/blocks/featured_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "testimonial_kYTWKj": {
+          "type": "testimonial",
           "settings": {
-            "maxwidth": 1080
+            "review_image": "shopify:\/\/shop_images\/Sweatblock-HRIZN-April-2024_Cleaned_c674c20d-2cc6-478b-8aa8-589fef241fd9.png",
+            "author": "Jane Doe",
+            "quote": "<p>“I absolutely love the quality of my Leo Bikini Bottoms.”<\/p>",
+            "rating_score": 5,
+            "color_scheme": "",
+            "review_product": "prescription-strength-antiperspirant-wipes"
+          }
+        },
+        "testimonial_3iic6L": {
+          "type": "testimonial",
+          "settings": {
+            "review_image": "shopify:\/\/shop_images\/Sweatblock-HRIZN-April-2024_Cleaned.png",
+            "author": "Jane Doe",
+            "quote": "<p>“I absolutely love the quality of my Leo Bikini Bottoms.”<\/p>",
+            "rating_score": 5,
+            "color_scheme": "",
+            "review_product": "clinical-strength-antiperspirant-roll-on"
+          }
+        },
+        "testimonial_r4Vn9N": {
+          "type": "testimonial",
+          "settings": {
+            "review_image": "shopify:\/\/shop_images\/6_86603c7f-bbfb-4870-bd44-bded8c98de55.png",
+            "author": "Jane Doe",
+            "quote": "<p>“I absolutely love the quality of my Leo Bikini Bottoms.”<\/p>",
+            "rating_score": 5,
+            "color_scheme": "scheme-1",
+            "review_product": "prescription-strength-antiperspirant-wipes"
+          }
+        },
+        "testimonial_7Kwm9x": {
+          "type": "testimonial",
+          "settings": {
+            "review_image": "shopify:\/\/shop_images\/7_afe9aa0c-e69b-461d-be5a-0114babb27e0.png",
+            "author": "Jane Doe",
+            "quote": "<p>“I absolutely love the quality of my Leo Bikini Bottoms.”<\/p>",
+            "rating_score": 5,
+            "color_scheme": "scheme-1",
+            "review_product": "antiperspirant-lotion-for-hands-feet"
+          }
+        },
+        "testimonial_dgfgrB": {
+          "type": "testimonial",
+          "settings": {
+            "review_image": "shopify:\/\/shop_images\/7_afe9aa0c-e69b-461d-be5a-0114babb27e0.png",
+            "author": "Jane Doe",
+            "quote": "<p>“I absolutely love the quality of my Leo Bikini Bottoms.”<\/p>",
+            "rating_score": 5,
+            "color_scheme": "scheme-1",
+            "review_product": "antiperspirant-lotion-for-hands-feet"
           }
         }
       },
       "block_order": [
-        "judge_me_reviews_featured_carousel_iT9VXX"
+        "testimonial_kYTWKj",
+        "testimonial_3iic6L",
+        "testimonial_r4Vn9N",
+        "testimonial_7Kwm9x",
+        "testimonial_dgfgrB"
       ],
       "settings": {
+        "heading": "Customers Love Us!",
+        "heading_size": "h3",
+        "subheading": "Over 3000+ 5 Star Reviews!",
+        "rating_icon": "star",
+        "layout": "carousel-none-media",
+        "slider_autoplay": 0,
+        "media_show_on": "desktop",
+        "spacing_inner": "2",
+        "section_width": "max-w-page",
+        "color_scheme": "scheme-4",
+        "spacing_top": "2",
+        "spacing_bottom": "2"
       }
     }
   },
@@ -917,6 +973,6 @@
     "social_media_highlights_fVaa73",
     "compare_slider_FCDTTc",
     "marquees_TFD63r",
-    "17273623684b6adf9e"
+    "custom_testimonials_zUxKPb"
   ]
 }
