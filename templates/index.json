@@ -557,75 +557,83 @@
         "spacing_bottom": "4"
       }
     },
-    "testimonials_CMyt3F": {
-      "type": "testimonials",
+    "custom_testimonials_zUxKPb": {
+      "type": "custom-testimonials",
       "blocks": {
-        "testimonial_qXzkny": {
+        "testimonial_kYTWKj": {
           "type": "testimonial",
           "settings": {
-            "author": "Alex Thompson",
-            "quote": "<p>After trying countless products, I finally found the perfect match with this brand; my skin has never looked better, and the ordering process was a breeze!</p>",
+            "review_image": "shopify://shop_images/Sweatblock-HRIZN-April-2024_Cleaned_c674c20d-2cc6-478b-8aa8-589fef241fd9.png",
+            "author": "Jane Doe",
+            "quote": "<p>“I absolutely love the quality of my Leo Bikini Bottoms.”</p>",
             "rating_score": 5,
-            "color_scheme": "scheme-1"
+            "color_scheme": "",
+            "review_product": "prescription-strength-antiperspirant-wipes"
           }
         },
-        "testimonial_NUmDwd": {
+        "testimonial_3iic6L": {
           "type": "testimonial",
           "settings": {
-            "author": "Michael Richards",
-            "quote": "<p>The results are astounding—my skin feels rejuvenated, and the fast shipping and eco-friendly packaging were the cherries on top!</p>",
-            "rating_score": 4,
-            "color_scheme": "scheme-1"
+            "review_image": "shopify://shop_images/Sweatblock-HRIZN-April-2024_Cleaned.png",
+            "author": "Jane Doe",
+            "quote": "<p>“I absolutely love the quality of my Leo Bikini Bottoms.”</p>",
+            "rating_score": 5,
+            "color_scheme": "",
+            "review_product": "clinical-strength-antiperspirant-roll-on"
           }
         },
-        "testimonial_KRiPJ3": {
+        "testimonial_r4Vn9N": {
           "type": "testimonial",
           "settings": {
-            "author": "David Lee",
-            "quote": "<p>Exceptional quality and affordable prices; this skincare line has made a noticeable difference in my complexion, and I love the natural ingredients they use!</p>",
+            "review_image": "shopify://shop_images/6_86603c7f-bbfb-4870-bd44-bded8c98de55.png",
+            "author": "Jane Doe",
+            "quote": "<p>“I absolutely love the quality of my Leo Bikini Bottoms.”</p>",
             "rating_score": 5,
-            "color_scheme": "scheme-1"
+            "color_scheme": "scheme-1",
+            "review_product": "prescription-strength-antiperspirant-wipes"
           }
         },
-        "testimonial_jbrGqN": {
+        "testimonial_7Kwm9x": {
           "type": "testimonial",
           "settings": {
-            "author": "Jonathan Carter",
-            "quote": "<p>Five stars all the way! The customer service was outstanding, and my sensitive skin is now smooth and clear thanks to their gentle formulas.</p>",
+            "review_image": "shopify://shop_images/7_afe9aa0c-e69b-461d-be5a-0114babb27e0.png",
+            "author": "Jane Doe",
+            "quote": "<p>“I absolutely love the quality of my Leo Bikini Bottoms.”</p>",
             "rating_score": 5,
-            "color_scheme": "scheme-1"
+            "color_scheme": "scheme-1",
+            "review_product": "antiperspirant-lotion-for-hands-feet"
           }
         },
-        "testimonial_KTQxBa": {
+        "testimonial_dgfgrB": {
           "type": "testimonial",
           "settings": {
-            "author": "Chris Wu",
-            "quote": "<p>I'm genuinely impressed with the effectiveness of these products; they've transformed my skincare routine, and I've received so many compliments on my improved skin!</p>",
+            "review_image": "shopify://shop_images/7_afe9aa0c-e69b-461d-be5a-0114babb27e0.png",
+            "author": "Jane Doe",
+            "quote": "<p>“I absolutely love the quality of my Leo Bikini Bottoms.”</p>",
             "rating_score": 5,
-            "color_scheme": "scheme-1"
+            "color_scheme": "scheme-1",
+            "review_product": "antiperspirant-lotion-for-hands-feet"
           }
         }
       },
       "block_order": [
-        "testimonial_qXzkny",
-        "testimonial_NUmDwd",
-        "testimonial_KRiPJ3",
-        "testimonial_jbrGqN",
-        "testimonial_KTQxBa"
+        "testimonial_kYTWKj",
+        "testimonial_3iic6L",
+        "testimonial_r4Vn9N",
+        "testimonial_7Kwm9x",
+        "testimonial_dgfgrB"
       ],
       "settings": {
-        "heading": "Testimonials",
+        "heading": "Customers Love Us!",
         "heading_size": "h3",
-        "subheading": "",
+        "subheading": "Over 3000+ 5 Star Reviews!",
         "rating_icon": "star",
-        "layout": "horizontal-w-media",
-        "slider_autoplay": 3,
-        "image_position": "image-start",
-        "image_aspect_ratio": "1 / 1",
+        "layout": "carousel-none-media",
+        "slider_autoplay": 0,
         "media_show_on": "desktop",
         "spacing_inner": "2",
-        "section_width": "max-w-fluid",
-        "color_scheme": "scheme-5",
+        "section_width": "max-w-page",
+        "color_scheme": "scheme-4",
         "spacing_top": "2",
         "spacing_bottom": "2"
       }
@@ -873,22 +881,6 @@
         "spacing_top": "0",
         "spacing_bottom": "0"
       }
-    },
-    "17273623684b6adf9e": {
-      "type": "apps",
-      "blocks": {
-        "judge_me_reviews_featured_carousel_iT9VXX": {
-          "type": "shopify://apps/judge-me-reviews/blocks/featured_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-            "maxwidth": 1080
-          }
-        }
-      },
-      "block_order": [
-        "judge_me_reviews_featured_carousel_iT9VXX"
-      ],
-      "settings": {
-      }
     }
   },
   "order": [
@@ -901,13 +893,12 @@
     "dual_tiles_nqzRrp",
     "dual_tiles_m3b67h",
     "dual_tiles_zNy4gJ",
-    "testimonials_CMyt3F",
+    "custom_testimonials_zUxKPb",
     "seo_content_BHH6dm",
     "marquees_z4HgVr",
     "blog_articles_ThCgzt",
     "social_media_highlights_fVaa73",
     "compare_slider_FCDTTc",
-    "marquees_TFD63r",
-    "17273623684b6adf9e"
+    "marquees_TFD63r"
   ]
 }
