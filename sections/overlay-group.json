@@ -13,7 +13,6 @@
   "sections": {
     "cart-drawer": {
       "type": "cart-drawer",
-      "disabled": true,
       "settings": {
         "card_media_aspect_ratio": "3/4",
         "button_url": "shopify://collections"
