@@ -458,6 +458,7 @@ if (!customElements.get('product-info')) {
               ?.hasAttribute("disabled") ?? true,
             window.variantStrings.soldOut
           );
+          updateSourceFromDestination("button-price");
 
           publish(PUB_SUB_EVENTS.variantChange, {
             data: {

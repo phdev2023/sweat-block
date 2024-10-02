@@ -98,14 +98,103 @@ variant-selects fieldset{
 .swatch--square.checked{
     background: #323e4821;
 }
-        
+.custom-testimonial__quote{
+    font-size: 16px;
+    text-align: left;
+}
+.custom-testimonial__quote p{
+    margin-top: 0 !important;
+    line-height: 22px;
+}
+.custom-testimonial__author{
+    float: right;
+    font-weight: bold;
+}
+.testimonial__product{
+    display: flex;
+    width: 100%;
+    gap:20px;
+    align-items: center;
+    padding-top: 10px;
+    margin-top: 10px;
+    border-top: 1px solid #eee;
+}
+.testimonial__product-image{
+    width: 25%;
+    height: 25%;
+    border-radius: 50%;
+}
+.testimonial__product-details{
+    font-size: 16px;
+    text-align: left;
+    line-height: 22px;
+
+}
+.custom-testimonial__body{
+    padding: 0 !important;
+}
+.custom-testimonial__content{
+    padding:20px;
+}
+.custom-testimonials__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.custom-testimonials .section-testimonials__ratings{
+    margin-block-end: 0 !important;
+} 
+.custom-testimonials .section-testimonials__ratings .stars{
+    display: flex;
+}      
+.custom-testimonials  .section-testimonials__subheading{
+    margin-block-end: 0 !important;
+    font-weight:bold;
+}
+.custom-testimonials .section__heading{
+       margin-block-end: 0 !important;
+} 
+.custom-testimonials__header{
+        margin-block-end: 4.8rem;
+}
 @media  screen and (min-width: 750px) {
     .template--product .product__title {
         font-size: calc(var(--font-size-static-large) * 1.5);
+      }
+      .custom-testimonials .card-slider .card-slider__slide {
+        width: 24% !important;
+        margin-right: 20px !important;
       }
 }
 @media only screen and (min-width: 992px) {
     .jdgm-carousel--gallery-theme .jdgm-carousel-item {
         width: 24% !important;
     }
+    .custom-testimonials__header{
+        flex-direction: column;
+    }
+}
+@media only screen and (max-width: 768px) {
+    
+    .custom-testimonials__header{
+        flex-direction: column;
+    }
+    .custom-testimonials .section-testimonials__ratings{
+        flex-direction: column;
+    } 
+}
+@media only screen and (max-width: 450px) {
+    .hero-banner .hero__heading, .hero-banner .hero__heading em {
+    
+        font-size: 32px !important;
+    }
+}
+@media only screen and (max-width: 325px) {
+    .product-form__input .swatch--square{
+        flex:48%;
+    }
+    .skio-group-topline{
+        font-size: 12px !important;
+    }
+  
 }
