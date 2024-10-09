@@ -3831,3 +3831,7 @@ back-to-top.hide {
 .main-product {
   max-width: 100vw;
 }
+.jdgm-widget.jdgm-widget {
+    max-width: 80%;
+    margin: auto;
+}
