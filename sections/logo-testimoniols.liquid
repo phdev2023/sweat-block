@@ -2,9 +2,10 @@
 <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
->
+/>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 <style>
   .swiper-container {
     width: 100%;
@@ -12,6 +13,7 @@
     box-sizing: border-box;
     position: relative;
   }
+
   .swiper-slide {
     text-align: center;
     display: flex;
@@ -23,6 +25,7 @@
   .swiper-wrapper {
     display: flex;
   }
+
   .logo-slide {
     opacity: 0.5; /* Set default opacity for inactive logos */
     cursor: pointer; /* Indicate clickable logos */
@@ -47,41 +50,46 @@
     flex-shrink: 0; /* Prevent shrinking */
     width: auto; /* Each slide should take the required width */
     text-align: center;
-
     font-weight: 400;
   }
 
   .first-slider .swiper-wrapper {
     justify-content: center;
   }
+
   .first-slider .swiper-slide:not(.swiper-slide-active) img {
     opacity: 0.32;
   }
+
   .second-slider .swiper-slide p {
     max-width: 420px;
   }
+
   .swiper-button-next,
   .swiper-button-prev {
     display: flex !important;
-    top:35px;
-    height:24px !important;
+    top: 35px;
+    height: 24px !important;
   }
-  .swiper-button-next:after,
-  .swiper-button-next:after, .swiper-button-prev:after  {
-    font-size: 24px;
-   
-    color: rgba(var(--color-foreground), 1);
 
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    font-size: 24px;
+    color: rgba(var(--color-foreground), 1);
   }
+
   @media screen and (min-width: 768px) {
     .swiper-slide {
       font-size: 25px;
       line-height: 35px;
     }
+
     .first-slider .swiper-slide {
       max-width: 84px;
     }
-    .swiper-button-next, .swiper-button-prev {
+
+    .swiper-button-next,
+    .swiper-button-prev {
       display: none !important;
     }
   }
@@ -90,15 +98,17 @@
     .first-slider .swiper-slide:not(.swiper-slide-active) {
       display: none;
     }
+
     .first-slider .swiper-slide {
       max-width: 111px;
     }
+
     .swiper-container.second-slider {
       padding: 0px 40px;
     }
-  
   }
 </style>
+
 <div class="container max-w-page">
   <div class="swiper-container first-slider">
     <div class="swiper-wrapper">
@@ -122,6 +132,7 @@
     <div class="swiper-button-prev"></div>
   </div>
 </div>
+
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     // First slider (Logos)
@@ -131,12 +142,10 @@
       spaceBetween: 10,
       loop: true,
       breakpoints: {
-        // When the window width is <= 767px (mobile screens)
         767: {
           slidesPerView: 1,
           centeredSlides: true,
         },
-        // For larger screens (e.g., tablets and desktops)
         768: {
           slidesPerView: 3, // Show 3 slides on larger screens
         },
@@ -148,21 +157,22 @@
       slidesPerView: 1,
       effect: 'fade',
       loop: true,
-     
       autoplay: {
         delay: 5000,
       },
-
       fadeEffect: {
-        crossFade: true, // Ensures proper fade between slides
+        crossFade: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
       },
       breakpoints: {
-        // When the window width is <= 767px (mobile screens)
         767: {
-          navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          },
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 1,
         },
       },
     });
