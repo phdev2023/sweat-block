@@ -133,6 +133,9 @@ variant-selects fieldset{
 .custom-testimonial__body{
     padding: 0 !important;
 }
+.testimonial__body.custom-testimonial__body.color-scheme-1 .testimonial__image img {
+    height: 280px !important;
+}
 .custom-testimonial__content{
     padding:20px;
 }
