@@ -3840,7 +3840,7 @@ back-to-top.hide {
     font-size: 18px;
 }
   .skio-group-topline {
-    font-size: 13px;
+    font-size: 13px !important;
 }
 }
 @media only screen and (max-width: 749px) {
