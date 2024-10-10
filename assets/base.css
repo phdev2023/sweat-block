@@ -3839,6 +3839,9 @@ back-to-top.hide {
 .cus-multitile h2.inline-richtext.h3 {
     font-size: 18px;
 }
+  .skio-group-topline {
+    font-size: 13px;
+}
 }
 @media only screen and (max-width: 749px) {
 .cus-multitile h2.inline-richtext.h3 {
