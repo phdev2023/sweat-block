@@ -630,7 +630,7 @@
         "rating_icon": "star",
         "layout": "carousel-none-media",
         "slider_autoplay": 1,
-        "media_show_on": "desktop",
+        "media_show_on": "both",
         "spacing_inner": "2",
         "section_width": "max-w-page",
         "color_scheme": "scheme-4",
