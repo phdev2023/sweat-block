@@ -3835,3 +3835,15 @@ back-to-top.hide {
     max-width: 80%;
     margin: auto;
 }
+@media only screen and (max-width: 1024px) {
+.cus-multitile h2.inline-richtext.h3 {
+    font-size: 14px;
+}
+}
+@media only screen and (max-width: 749px) {
+.cus-multitile h2.inline-richtext.h3 {
+    font-size: calc(var(--font-heading-scale)* var(--h3-multiplier));
+}
+
+
+}
