@@ -165,7 +165,7 @@ variant-selects fieldset{
         font-size: calc(var(--font-size-static-large) * 1.5);
       }
       .custom-testimonials .card-slider .card-slider__slide {
-        width: 24% !important;
+        width: 48% !important;
         margin-right: 20px !important;
       }
 }
