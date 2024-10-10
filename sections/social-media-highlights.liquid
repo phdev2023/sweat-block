@@ -15,7 +15,7 @@
         <p class="social-media-highlights__subheading">{{- section.settings.subheading -}}</p>
       {% endif %}
       {%- if section.settings.heading != blank -%}
-        <h2 class="section__heading h3 {% if section.settings.layout == "default" %} small-up-hide{% endif %} ">
+        <h2 class="section__heading {{ section.settings.heading_size }} {% if section.settings.layout == "default" %}{% endif %} ">
           {{- section.settings.heading -}}
         </h2>
       {%- endif -%}
