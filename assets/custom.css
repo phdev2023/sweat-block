@@ -201,3 +201,8 @@ variant-selects fieldset{
     }
   
 }
+@media only screen and (max-width: 1024px) {
+  .testimonial__product {
+    flex-direction: column;
+}
+}
