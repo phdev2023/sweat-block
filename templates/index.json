@@ -629,7 +629,7 @@
         "subheading": "Over 3000+ 5 Star Reviews!",
         "rating_icon": "star",
         "layout": "carousel-none-media",
-        "slider_autoplay": 0,
+        "slider_autoplay": 1,
         "media_show_on": "desktop",
         "spacing_inner": "2",
         "section_width": "max-w-page",
