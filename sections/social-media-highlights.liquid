@@ -59,7 +59,7 @@
               {% if forloop.index == 2 and section.settings.layout == "default" %}
                 <div class="swiper-slide social-media-highlights__content-card color-{{ section.settings.content_card_color_scheme }} gradient">
                   {% if section.settings.heading != blank %}
-                    <h4 class="{{ section.settings.heading_size }}">{{- section.settings.heading -}}</h4>
+                    <h4 class="">{{- section.settings.heading -}}</h4>
                   {% endif %}
                   {% if section.settings.subheading != blank %}
                     <p>{{- section.settings.subheading -}}</p>
